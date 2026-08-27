@@ -480,7 +480,29 @@ VoiceのBefore / Lesson / After本文はすでに正式確定済みだったが�
 
 ---
 
-# 11. OPEN DECISIONS
+# 11. FAQ COPY DECISIONS
+
+## Decision 20: FAQ Q1〜Q8の正式回答を確定
+
+### Decision
+
+FAQ Q1〜Q8の正式回答を確定し、`01_CONTENT_STRUCTURE.md`へ反映する。
+
+### Reason
+
+- FAQ実装と正本Markdownを一致させるため
+- 今後の修正で回答文が勝手に変わらないようにするため
+- 正本不足による実装停止を防ぐため
+
+### Alternative / Non-adopted direction
+
+- Q1〜Q8を未確定のまま残す
+- 実装時に回答を要約・短縮・言い換えする
+- 正本と実装で異なる回答文を管理する
+
+---
+
+# 12. OPEN DECISIONS
 
 以下は未確定のため、Decisionとして確定しない。
 
@@ -493,7 +515,6 @@ VoiceのBefore / Lesson / After本文はすでに正式確定済みだったが�
 - Flow各STEPの本文
 - Voice 3件のBefore・Lesson・After本文
 - Priceの初回90分含有内容・おすすめ対象・通常120分説明・3回パック例・プラン選び説明
-- FAQ Q1〜Q8の正式回答文
 - Reservation Formの正式な選択肢・placeholder・具体的なエラー文
 - Reservation Formの送信先・送信方法・処理
 - Container、Spacing、Border Radius、breakpointなどの正式数値
@@ -503,7 +524,7 @@ VoiceのBefore / Lesson / After本文はすでに正式確定済みだったが�
 
 ---
 
-# 12. STATUS NOTE
+# 13. STATUS NOTE
 
 元の `00_PROJECT_BRIEF.md` にあった「正式画像制作、ロゴ制作、Git / GitHubが未着手」という進行状況は、その後の作業で更新された。
 

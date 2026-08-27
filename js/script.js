@@ -316,3 +316,34 @@
     completionTitle.focus();
   });
 })();
+
+(() => {
+  "use strict";
+
+  const faq = document.querySelector("#faq");
+
+  if (!faq) {
+    return;
+  }
+
+  const questions = [...faq.querySelectorAll(".faq__question")];
+
+  questions.forEach((question) => {
+    const answerId = question.getAttribute("aria-controls");
+    const answer = document.querySelector(`#${answerId}`);
+
+    if (!answer) {
+      return;
+    }
+
+    question.setAttribute("aria-expanded", "false");
+    answer.hidden = true;
+
+    question.addEventListener("click", () => {
+      const isExpanded = question.getAttribute("aria-expanded") === "true";
+
+      question.setAttribute("aria-expanded", String(!isExpanded));
+      answer.hidden = isExpanded;
+    });
+  });
+})();

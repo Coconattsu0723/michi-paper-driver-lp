@@ -1530,6 +1530,132 @@ p {
   margin-block-start: 2rem;
 }
 
+.faq {
+  padding-block: var(--space-section);
+  background-color: var(--color-base);
+  scroll-margin-block-start: 1rem;
+}
+
+.faq__intro {
+  margin-block-start: 1.5rem;
+  font-size: 0.9375rem;
+  line-height: 2;
+}
+
+.faq__intro p + p {
+  margin-block-start: 1rem;
+}
+
+.faq__list {
+  margin-block-start: 2.5rem;
+  border-block-start: 0.0625rem solid var(--color-sub);
+}
+
+.faq__item {
+  border-block-end: 0.0625rem solid var(--color-sub);
+}
+
+.faq__question-heading {
+  margin: 0;
+}
+
+.faq__question {
+  display: grid;
+  width: 100%;
+  min-height: 5rem;
+  grid-template-columns: auto minmax(0, 1fr) 1.25rem;
+  align-items: start;
+  gap: 0.75rem;
+  padding-block: 1.25rem;
+  color: var(--color-deep);
+  text-align: start;
+}
+
+.faq__question:hover {
+  background-color: color-mix(in srgb, var(--color-sub) 32%, transparent);
+}
+
+.faq__question:focus-visible {
+  position: relative;
+  z-index: 1;
+  border-radius: var(--radius-small);
+  outline: 0.1875rem solid var(--color-deep);
+  outline-offset: 0.1875rem;
+}
+
+.faq__question-number {
+  padding-block-start: 0.125rem;
+  color: var(--color-main);
+  font-family: var(--font-en);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.6;
+}
+
+.faq__question-text {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.faq__icon {
+  position: relative;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-block-start: 0.1875rem;
+}
+
+.faq__icon::before,
+.faq__icon::after {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  width: 1rem;
+  height: 0.125rem;
+  background-color: var(--color-main);
+  content: "";
+  transform: translate(-50%, -50%);
+}
+
+.faq__icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.faq__question[aria-expanded="true"] .faq__icon::after {
+  display: none;
+}
+
+.faq__answer-inner {
+  padding: 0 0 1.5rem 2.625rem;
+  font-size: 0.9375rem;
+  line-height: 1.9;
+}
+
+.faq__answer-inner p + p {
+  margin-block-start: 1rem;
+}
+
+.faq__answer-inner strong {
+  font-weight: 600;
+}
+
+.faq__closing {
+  margin-block-start: 2.5rem;
+  padding-inline-start: 1rem;
+  border-inline-start: 0.1875rem solid var(--color-main);
+  font-size: 0.9375rem;
+  line-height: 1.9;
+}
+
+.faq__closing p + p {
+  margin-block-start: 0.75rem;
+}
+
+.faq__closing strong {
+  font-weight: 600;
+}
+
 .reservation {
   padding-block: 3rem var(--space-section);
   background-color: var(--color-sub);
