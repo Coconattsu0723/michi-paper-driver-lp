@@ -1,6 +1,16 @@
 # michi DECISIONS LOG
 
-## Initial decisions
+## 0. このファイルの位置づけ
+
+このMarkdownは、**「michi PAPER DRIVER LESSON」** で何を決めたか、その理由、比較した方向・非採用方向を記録する正本です。
+
+未確定事項をDecisionとして追加しません。各ReasonとAlternativeは既存正本に記録された方針・NG・比較条件から整理したもので、新しいサービス条件やコピーを追加するものではありません。今後の変更は、変更内容と理由を追記します。
+
+---
+
+# 1. INITIAL DECISIONS
+
+既存ログの内容を維持する。
 
 - Service: 出張型ペーパードライバー講習
 - Brand: `michi`
@@ -11,6 +21,331 @@
 - Color direction: Blue Gray × Ivory × Soft Apricot
 - Photo direction: Lifestyle Editorial
 
-The detailed current decisions are recorded in `00_PROJECT_BRIEF.md`.
+詳細な現行仕様は `00_PROJECT_BRIEF.md`、`01_CONTENT_STRUCTURE.md`、`02_DESIGN_RULES.md`、`03_IMAGE_ASSETS.md`、`04_IMPLEMENTATION_RULES.md` に記録する。
 
-Do not invent missing decisions. Record future changes here with the reason for the change.
+---
+
+# 2. PROJECT / SERVICE DECISIONS
+
+## Decision 01: 商材を出張型ペーパードライバー講習にする
+
+### Decision
+
+商材は、実際の生活ルートで練習できる出張型ペーパードライバー講習サービスとする。
+
+### Reason
+
+- 免許はあるが運転できないという明確な課題がある
+- 送迎、通院、買い物など生活上の必要性と結びつく
+- 不安 → 提供価値 → 初回講習予約というLPの心理導線を作れる
+- 実際に使う道で練習するというサービスの違いを説明できる
+- 写真、Safety、診断UI、予約フォームを通して情報設計と実装力を見せられる
+
+### Alternative / Non-adopted direction
+
+- 教習所内のコース練習だけを中心にした見せ方
+- 車や運転技術そのものを主役にする自動車広告的な見せ方
+- 見た目だけで成立し、課題からCVまでの接続が弱いテーマ
+
+---
+
+## Decision 02: 子育て中の送迎ニーズをメインターゲットにする
+
+### Decision
+
+メインターゲットは、子どもの送迎をきっかけに久しぶりに運転を再開したい子育て中の人とする。
+
+### Reason
+
+- 雨の日の送迎、急な通院、習い事、買い物など運転再開の具体的な必要性がある
+- 「便利そう」だけではなく、必要なときに自分で動きたいという本音が明確
+- 子どもを乗せる怖さ、家族へ頼る負担、駐車への不安など、LPで解消すべき不安を具体化できる
+- 受講後の変化を日常の場面として見せられる
+
+### Alternative / Non-adopted direction
+
+- 年齢・性別だけで広く区切ったペーパードライバー全般
+- 技術上達だけを目的とするターゲット設定
+- 「すぐ克服できる」と急かす訴求
+
+---
+
+## Decision 03: CVを初回90分講習予約にする
+
+### Decision
+
+最終CVは「初回90分ペーパードライバー講習を予約する」、CTA正式文言は「初回90分講習を予約する」とする。
+
+### Reason
+
+- LPの主CVを一つに絞り、次の行動を明確にする
+- 最初の一歩として、通常120分や3回パックより初回講習を強く見せる
+- 予約フォームまでの情報設計を一本化できる
+- ターゲットが不安を解消した後、そのまま具体的な行動へ進める
+
+### Alternative / Non-adopted direction
+
+- 無料相談を主CVにする
+- 初回、通常、3回パックを同じ強さで並べる
+- CTAを「送信」「申し込む」など、押した後の行動が分かりにくい文言にする
+
+---
+
+## Decision 04: ブランド名をmichiにする
+
+### Decision
+
+ブランド名は `michi` とする。
+
+### Reason
+
+「道」を意味する日本語のローマ字表記であり、次のサービス価値全体につながるため。
+
+- いつもの送迎ルート
+- スーパーまでの道
+- 病院までの道
+- これから自分で走れるようになる道
+
+### Alternative / Non-adopted direction
+
+固有の非採用ブランド名は記録されていない。未記録の候補を新しく作らない。
+
+---
+
+## Decision 05: 怖さを否定しないサービス設計にする
+
+### Decision
+
+「簡単」「すぐ慣れる」と急かさず、怖い状態からできることを少しずつ増やす。
+
+### Reason
+
+- ターゲットの行動できない理由に事故や失敗への恐怖がある
+- 不安を否定しないことがブランド人格「やさしい・落ち着いた・頼れる」につながる
+- 講習前ヒアリング、基礎確認、交通量の少ない道からの開始など、Safety設定と一貫する
+
+### Alternative / Non-adopted direction
+
+- 「克服」「すぐできる」「必ず運転できる」と断定する
+- 不安を過度に煽る
+- 希望ルートを必ず走れると表現する
+
+---
+
+# 3. CONTENT / INFORMATION ARCHITECTURE DECISIONS
+
+## Decision 06: 心理導線を不安から行動まで段階化する
+
+### Decision
+
+LPを、不安・迷い → 判断材料 → 自分にも合いそう → 安心 → 行動の順で設計する。
+
+### Reason
+
+- ターゲットには技術面だけでなく、Safety、Instructor、料金、子ども同乗など複数の不安がある
+- CTA前に判断材料を揃える必要がある
+- Heroで説明を詰め込まず、各セクションへ役割を分けられる
+
+### Alternative / Non-adopted direction
+
+- Heroだけで料金・機能・Safetyをすべて説明する
+- 不安の解消前にCTAだけを繰り返す
+- よくあるLPの順番を理由なく採用する
+
+---
+
+## Decision 07: Driving Checkをサービス選択支援UIにする
+
+### Decision
+
+Driving Checkは「何から練習すればいいか分からない」という課題を解決するUIとして設計する。
+
+### Reason
+
+- 行動できない理由の一つに、練習の始め方が分からないことがある
+- 予約時に自分の不安や希望を整理しやすくなる
+- LP内でJavaScriptの操作設計を見せられる
+
+### Alternative / Non-adopted direction
+
+- ゲーム的な性格診断にする
+- Driving Checkを画面画像として作る
+- JavaScriptが動かなければ主要情報が読めない構造にする
+
+---
+
+# 4. DESIGN DECISIONS
+
+## Decision 08: Design ConceptをCalm Everyday Drivingにする
+
+### Decision
+
+Design Conceptは `Calm Everyday Driving` とし、「教習」ではなく「安心して運転できる日常」を見せる。
+
+### Reason
+
+- サービス価値の中心は技術の誇示ではなく、日常を自分で動かせる変化にある
+- ターゲットの恐怖を強めず、生活サービスとして近づきやすくする
+- 専門サービスとしての信頼も失わないよう、生活サービス70% / 専門サービス30%を目安にする
+
+### Alternative / Non-adopted direction
+
+- 強い青や黒
+- スピード感
+- 道路標識モチーフ
+- 車を大きく見せる
+- 「克服」「上達」を強調する
+
+---
+
+## Decision 09: Blue Gray × Ivory × Soft Apricotを採用する
+
+### Decision
+
+配色は次を正式カラーとする。
+
+- Base / Warm Ivory `#FAF8F3`
+- Main / Calm Blue Gray `#7896A1`
+- Deep / Deep Slate `#354A52`
+- Sub / Mist Blue `#DCE6E8`
+- Accent / Soft Apricot `#E5AD82`
+- White `#FFFFFF`
+
+### Reason
+
+- Ivoryで暮らし、温かさ、余白を作る
+- Blue Grayで安心、信頼、落ち着きを示す
+- Deep Slateで本文の可読性と専門性を支える
+- Mist BlueでSafetyやFeaturesを穏やかにグルーピングする
+- Soft ApricotをCTAへ限定的に使い、行動の優先順位を作る
+
+### Alternative / Non-adopted direction
+
+- 自動車サイトに多い強い青、黒、強いコントラスト
+- CTA以外にもAccentを多用する
+- 子育て向けを理由に可愛さや丸さを強くする
+
+---
+
+## Decision 10: 写真をLifestyle Editorialにする
+
+### Decision
+
+写真は、日本の郊外・住宅地の日常を柔らかな自然光、低〜中彩度で見せるLifestyle Editorial方向とする。
+
+### Reason
+
+- 車ではなく、子どもとの日常に車が自然にある未来を主役にするため
+- 広告的な満面の笑顔より、普通の日常に近い信頼感を作るため
+- Brand PersonalityとBlue Gray / Ivoryの配色に合わせるため
+- 複数写真を同じブランドの撮影シリーズとして見せるため
+
+### Alternative / Non-adopted direction
+
+- 高級車広告風
+- スピード感やドラマチックな光
+- 車だけの商品写真
+- 過度に整った住宅広告風
+- AI特有の不自然なツヤやCG感
+- 困り顔を強調して不安を煽る写真
+
+---
+
+## Decision 11: Safetyの複雑なアイコンだけ画像制作し、Lesson / FeaturesはSVG予定にする
+
+### Decision
+
+Safetyの補助ブレーキ、保険・事故対応、自家用車 / 講習車は正式画像を使用する。Lesson / Featuresのシンプルな線画アイコンはSVG実装を予定する。
+
+### Reason
+
+- Safetyは仕組みや対応内容を一目で伝える必要があり、複雑な図柄が信頼形成を補助する
+- Lesson / Featuresは単純な概念が中心で、SVGのほうが線幅、色、サイズをUIに合わせて管理しやすい
+- すべてを画像生成せず、写真と競合しない一貫した線画表現にできる
+- 小さな表示やレスポンシブでも調整しやすい
+
+### Alternative / Non-adopted direction
+
+- Lesson / Features / Flowをすべて画像生成する
+- 複数アイコンを1枚の画像にまとめる
+- グラデーションや過度な丸みを使う
+- Driving Checkを画像として制作する
+
+---
+
+## Decision 12: 375pxをSP正本にする
+
+### Decision
+
+Mobile Firstで375pxを最初に完成させ、375 → 390 → 768 → 1024 → 1366 → 1440pxの順で確認する。
+
+### Reason
+
+- SPでの1カラム、読み順、写真とテキスト、CTA、Formを最初に整えるため
+- 情報を横並びにしすぎず、ターゲットが読み進めやすい構造を優先するため
+- 小さい画面で成立する情報優先度を先に決め、PCへ拡張するため
+
+### Alternative / Non-adopted direction
+
+- PCから先に作る
+- 確認幅ごとにmedia queryを作る
+- 375pxが固まる前にPC調整へ進む
+- 1440pxで本文を画面いっぱいに広げる
+
+---
+
+# 5. REFERENCE SITE POLICY
+
+## Decision 13: 参考サイトは設計思想だけを分析する
+
+### Decision
+
+参考サイト `https://recruit.bellezeup.com/` は、商材・文章・配色・固有レイアウトをコピーせず、情報設計や視線誘導の考え方を分析する。
+
+### Reason
+
+参考にする要素：
+
+- Heroで説明しすぎない
+- ユーザーの関心順に情報を並べる
+- 不安を具体的に分解して先回りして解消する
+- メリットだけでなく不安要素や現実的な懸念も扱う
+- 人物写真を信頼形成に使う
+- CTA前に判断材料を揃える
+- 大きな写真、余白、Editorial寄りのTypography
+- 英字ラベルを視覚、日本語見出しを意味として使い分ける
+- 派手なインタラクションより、読み進めるためのUIを優先する
+
+### Alternative / Non-adopted direction
+
+- コピー文章を流用する
+- 固有レイアウトをそのまま再現する
+- 写真、ロゴ、ブランドカラー、独自UI表現をコピーする
+
+---
+
+# 6. OPEN DECISIONS
+
+以下は未確定のため、Decisionとして確定しない。
+
+- `michi / PAPER DRIVER LESSON` の最終表記仕様
+- English Fontの最終選定（Inter / DM Sans）
+- 対応エリアの最終確定（現在は第一案）
+- キャンセル条件の最終確定（現在は第一案）
+- Instructorの正式人物名・経歴詳細
+- Problem以降の各セクションの正式本文コピー
+- Driving Checkの正式設問・選択肢・結果文・挙動
+- FAQの正式質問文・回答文
+- Reservation Formの送信先・処理・エラー文・完了文
+- Container、Spacing、Border Radius、breakpointなどの正式数値
+- OGP
+- favicon
+- 公開URL、canonical、OGP URL
+
+---
+
+# 7. STATUS NOTE
+
+元の `00_PROJECT_BRIEF.md` にあった「正式画像制作、ロゴ制作、Git / GitHubが未着手」という進行状況は、その後の作業で更新された。
+
+現在は、正式写真7点、Safetyアイコン3点、ロゴ1点をプロジェクトへ格納済みで、ローカルGit管理と初回commitまで完了している。GitHub remote、push、HTML / CSS / JavaScript実装、公開、OGP、faviconは未着手。
