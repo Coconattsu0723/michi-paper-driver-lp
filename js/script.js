@@ -405,3 +405,65 @@
     });
   });
 })();
+
+(() => {
+  "use strict";
+
+  const fixedCTA = document.querySelector("[data-mobile-fixed-cta]");
+  const hero = document.querySelector("#top");
+  const menuButton = document.querySelector(".menu-button");
+  const stopSections = [
+    document.querySelector("#final-cta"),
+    document.querySelector("#reservation"),
+    document.querySelector("#privacy"),
+    document.querySelector(".site-footer"),
+  ].filter(Boolean);
+
+  if (!fixedCTA || !hero || !menuButton || stopSections.length === 0 || !("IntersectionObserver" in window)) {
+    return;
+  }
+
+  const stopVisibility = new Map();
+  let heroPassed = false;
+
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+
+    return rect.top < window.innerHeight && rect.bottom > 0;
+  }
+
+  function updateFixedCTA() {
+    const menuIsOpen = menuButton.getAttribute("aria-expanded") === "true";
+    const stopSectionIsVisible = [...stopVisibility.values()].some(Boolean);
+
+    fixedCTA.hidden = !heroPassed || stopSectionIsVisible || menuIsOpen;
+  }
+
+  const heroRect = hero.getBoundingClientRect();
+  heroPassed = heroRect.bottom <= 0;
+
+  stopSections.forEach((section) => {
+    stopVisibility.set(section, isInViewport(section));
+  });
+
+  updateFixedCTA();
+
+  const heroObserver = new IntersectionObserver(([entry]) => {
+    heroPassed = !entry.isIntersecting && entry.boundingClientRect.bottom <= 0;
+    updateFixedCTA();
+  });
+
+  const stopObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      stopVisibility.set(entry.target, entry.isIntersecting);
+    });
+
+    updateFixedCTA();
+  });
+
+  const menuObserver = new MutationObserver(updateFixedCTA);
+
+  heroObserver.observe(hero);
+  stopSections.forEach((section) => stopObserver.observe(section));
+  menuObserver.observe(menuButton, { attributeFilter: ["aria-expanded"] });
+})();
