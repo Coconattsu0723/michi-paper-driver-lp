@@ -1352,9 +1352,293 @@
         </div>
       </section>
 
-      <section id="reservation" class="section-outline" aria-labelledby="reservation-title">
+      <section id="reservation" class="reservation" aria-labelledby="reservation-title">
         <div class="container">
-          <h2 id="reservation-title">初回90分講習のご予約</h2>
+          <header class="reservation__header">
+            <p class="reservation__label section-label">RESERVATION</p>
+            <h2 id="reservation-title" class="reservation__title section-title">初回90分講習のご予約</h2>
+            <div class="reservation__intro">
+              <p>現在の運転状況や、練習したいことをお聞かせください。</p>
+              <p>「何から練習すればいいか分からない」場合も、<br>分かる範囲で入力いただければ大丈夫です。</p>
+              <p>フォーム送信後、michiからの確認メールをもって予約確定となります。</p>
+            </div>
+          </header>
+
+          <p id="reservation-demo-note" class="reservation__demo-note">
+            ※このサイトはポートフォリオ用の架空サービスです。フォームから実際の予約は行われません。
+          </p>
+
+          <form id="reservation-form" class="reservation-form" novalidate aria-describedby="reservation-demo-note">
+            <div class="form-field">
+              <div class="form-field__heading">
+                <label class="form-label" for="reservation-name">お名前</label>
+                <span class="form-status form-status--required" aria-hidden="true">必須</span>
+              </div>
+              <input
+                id="reservation-name"
+                class="form-control"
+                name="name"
+                type="text"
+                placeholder="山田 花子"
+                autocomplete="name"
+                required
+                aria-invalid="false"
+                aria-describedby="reservation-name-error"
+              >
+              <p id="reservation-name-error" class="form-error" hidden></p>
+            </div>
+
+            <div class="form-field">
+              <div class="form-field__heading">
+                <label class="form-label" for="reservation-email">メールアドレス</label>
+                <span class="form-status form-status--required" aria-hidden="true">必須</span>
+              </div>
+              <input
+                id="reservation-email"
+                class="form-control"
+                name="email"
+                type="email"
+                placeholder="example@email.com"
+                autocomplete="email"
+                required
+                aria-invalid="false"
+                aria-describedby="reservation-email-error"
+              >
+              <p id="reservation-email-error" class="form-error" hidden></p>
+            </div>
+
+            <div class="form-field">
+              <div class="form-field__heading">
+                <label class="form-label" for="reservation-tel">電話番号</label>
+                <span class="form-status form-status--required" aria-hidden="true">必須</span>
+              </div>
+              <input
+                id="reservation-tel"
+                class="form-control"
+                name="tel"
+                type="tel"
+                inputmode="tel"
+                placeholder="090-1234-5678"
+                autocomplete="tel"
+                required
+                aria-invalid="false"
+                aria-describedby="reservation-tel-error"
+              >
+              <p id="reservation-tel-error" class="form-error" hidden></p>
+            </div>
+
+            <fieldset class="form-group">
+              <legend class="form-legend">
+                希望日時
+                <span class="form-status form-status--required" aria-hidden="true">必須</span>
+              </legend>
+
+              <div class="form-field form-field--nested">
+                <label class="form-label" for="reservation-date-1">第1希望日時</label>
+                <input
+                  id="reservation-date-1"
+                  class="form-control"
+                  name="preferred_date_1"
+                  type="datetime-local"
+                  required
+                  aria-invalid="false"
+                  aria-describedby="reservation-date-1-error"
+                >
+                <p id="reservation-date-1-error" class="form-error" hidden></p>
+              </div>
+
+              <div class="form-field form-field--nested">
+                <label class="form-label" for="reservation-date-2">第2希望日時</label>
+                <input
+                  id="reservation-date-2"
+                  class="form-control"
+                  name="preferred_date_2"
+                  type="datetime-local"
+                  required
+                  aria-invalid="false"
+                  aria-describedby="reservation-date-2-error"
+                >
+                <p id="reservation-date-2-error" class="form-error" hidden></p>
+              </div>
+
+              <div class="form-field form-field--nested">
+                <label class="form-label" for="reservation-date-3">第3希望日時</label>
+                <input
+                  id="reservation-date-3"
+                  class="form-control"
+                  name="preferred_date_3"
+                  type="datetime-local"
+                  required
+                  aria-invalid="false"
+                  aria-describedby="reservation-date-3-error"
+                >
+                <p id="reservation-date-3-error" class="form-error" hidden></p>
+              </div>
+            </fieldset>
+
+            <div class="form-field">
+              <div class="form-field__heading">
+                <label class="form-label" for="reservation-area">希望エリア</label>
+                <span class="form-status form-status--required" aria-hidden="true">必須</span>
+              </div>
+              <input
+                id="reservation-area"
+                class="form-control"
+                name="area"
+                type="text"
+                placeholder="愛知県名古屋市"
+                autocomplete="address-level2"
+                required
+                aria-invalid="false"
+                aria-describedby="reservation-area-help reservation-area-error"
+              >
+              <p id="reservation-area-help" class="form-help">ご自宅またはレッスン開始を希望するエリアをご入力ください。</p>
+              <p id="reservation-area-error" class="form-error" hidden></p>
+            </div>
+
+            <fieldset class="form-group" aria-describedby="reservation-vehicle-error">
+              <legend class="form-legend">
+                レッスン車両
+                <span class="form-status form-status--required" aria-hidden="true">必須</span>
+              </legend>
+              <div class="form-options">
+                <label class="form-option">
+                  <input class="form-option__input" name="vehicle" type="radio" value="自家用車を希望" required aria-invalid="false" aria-describedby="reservation-vehicle-error">
+                  <span>自家用車を希望</span>
+                </label>
+                <label class="form-option">
+                  <input class="form-option__input" name="vehicle" type="radio" value="講習車を希望" required aria-invalid="false" aria-describedby="reservation-vehicle-error">
+                  <span>講習車を希望</span>
+                </label>
+                <label class="form-option">
+                  <input class="form-option__input" name="vehicle" type="radio" value="相談して決めたい" required aria-invalid="false" aria-describedby="reservation-vehicle-error">
+                  <span>相談して決めたい</span>
+                </label>
+              </div>
+              <p id="reservation-vehicle-error" class="form-error" hidden></p>
+            </fieldset>
+
+            <fieldset class="form-group" aria-describedby="reservation-break-error">
+              <legend class="form-legend">
+                運転ブランク
+                <span class="form-status form-status--required" aria-hidden="true">必須</span>
+              </legend>
+              <div class="form-options">
+                <label class="form-option">
+                  <input class="form-option__input" name="driving_break" type="radio" value="1年以内" required aria-invalid="false" aria-describedby="reservation-break-error">
+                  <span>1年以内</span>
+                </label>
+                <label class="form-option">
+                  <input class="form-option__input" name="driving_break" type="radio" value="1〜3年" required aria-invalid="false" aria-describedby="reservation-break-error">
+                  <span>1〜3年</span>
+                </label>
+                <label class="form-option">
+                  <input class="form-option__input" name="driving_break" type="radio" value="3〜5年" required aria-invalid="false" aria-describedby="reservation-break-error">
+                  <span>3〜5年</span>
+                </label>
+                <label class="form-option">
+                  <input class="form-option__input" name="driving_break" type="radio" value="5年以上" required aria-invalid="false" aria-describedby="reservation-break-error">
+                  <span>5年以上</span>
+                </label>
+                <label class="form-option">
+                  <input class="form-option__input" name="driving_break" type="radio" value="免許取得後ほとんど運転していない" required aria-invalid="false" aria-describedby="reservation-break-error">
+                  <span>免許取得後ほとんど運転していない</span>
+                </label>
+              </div>
+              <p id="reservation-break-error" class="form-error" hidden></p>
+            </fieldset>
+
+            <fieldset class="form-group">
+              <legend class="form-legend">
+                練習したいこと
+                <span class="form-status form-status--optional" aria-hidden="true">任意</span>
+              </legend>
+              <div class="form-options">
+                <label class="form-option">
+                  <input class="form-option__input" name="practice" type="checkbox" value="自宅周辺">
+                  <span>自宅周辺</span>
+                </label>
+                <label class="form-option">
+                  <input class="form-option__input" name="practice" type="checkbox" value="子どもの送迎ルート">
+                  <span>子どもの送迎ルート</span>
+                </label>
+                <label class="form-option">
+                  <input class="form-option__input" name="practice" type="checkbox" value="駐車">
+                  <span>駐車</span>
+                </label>
+                <label class="form-option">
+                  <input class="form-option__input" name="practice" type="checkbox" value="狭い道">
+                  <span>狭い道</span>
+                </label>
+                <label class="form-option">
+                  <input class="form-option__input" name="practice" type="checkbox" value="右左折">
+                  <span>右左折</span>
+                </label>
+                <label class="form-option">
+                  <input class="form-option__input" name="practice" type="checkbox" value="車線変更">
+                  <span>車線変更</span>
+                </label>
+                <label class="form-option">
+                  <input class="form-option__input" name="practice" type="checkbox" value="スーパー・病院など目的地まで">
+                  <span>スーパー・病院など目的地まで</span>
+                </label>
+                <label class="form-option">
+                  <input class="form-option__input" name="practice" type="checkbox" value="基本操作から確認したい">
+                  <span>基本操作から確認したい</span>
+                </label>
+                <label class="form-option">
+                  <input class="form-option__input" name="practice" type="checkbox" value="まだ分からない / 相談したい">
+                  <span>まだ分からない / 相談したい</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="form-field">
+              <div class="form-field__heading">
+                <label class="form-label" for="reservation-message">その他、不安なことや伝えておきたいこと</label>
+                <span class="form-status form-status--optional" aria-hidden="true">任意</span>
+              </div>
+              <textarea
+                id="reservation-message"
+                class="form-control form-control--textarea"
+                name="message"
+                placeholder="駐車が特に不安です。保育園までの道を練習したいです。"
+              ></textarea>
+            </div>
+
+            <fieldset class="form-group" aria-describedby="reservation-privacy-error">
+              <legend class="form-legend">
+                プライバシーポリシー同意
+                <span class="form-status form-status--required" aria-hidden="true">必須</span>
+              </legend>
+              <label class="form-option form-option--privacy">
+                <input id="reservation-privacy" class="form-option__input" name="privacy" type="checkbox" required aria-invalid="false" aria-describedby="reservation-privacy-error">
+                <span>プライバシーポリシーに同意する</span>
+              </label>
+              <p id="reservation-privacy-error" class="form-error" hidden></p>
+            </fieldset>
+
+            <div class="reservation-form__confirmation">
+              <p><strong>この時点では予約確定ではありません。</strong></p>
+              <p>内容を確認後、michiから日程確認のご連絡をお送りします。<br>確認メールをもって予約確定となります。</p>
+            </div>
+
+            <button class="button button--primary reservation-form__submit" type="submit">予約内容を送信する</button>
+          </form>
+
+          <section
+            id="reservation-completion"
+            class="reservation__completion"
+            aria-live="polite"
+            aria-labelledby="reservation-completion-title"
+            hidden
+          >
+            <h3 id="reservation-completion-title" class="reservation__completion-title" tabindex="-1">ご予約ありがとうございます。</h3>
+            <p>予約内容を受け付けました。</p>
+            <p>ご入力いただいた内容を確認し、<br>michiから日程についてご連絡します。</p>
+            <p><strong>確認メールをもって、予約確定となります。</strong></p>
+            <p class="reservation__completion-note">ポートフォリオ用デモのため、実際の送信は行われていません。</p>
+          </section>
         </div>
       </section>
     </main>

@@ -177,3 +177,142 @@
   controls.hidden = false;
   showQuestion(0);
 })();
+
+(() => {
+  "use strict";
+
+  const form = document.querySelector("#reservation-form");
+
+  if (!form) {
+    return;
+  }
+
+  const completion = document.querySelector("#reservation-completion");
+  const completionTitle = completion.querySelector("#reservation-completion-title");
+  const nameInput = form.querySelector("#reservation-name");
+  const emailInput = form.querySelector("#reservation-email");
+  const telInput = form.querySelector("#reservation-tel");
+  const dateInputs = [
+    form.querySelector("#reservation-date-1"),
+    form.querySelector("#reservation-date-2"),
+    form.querySelector("#reservation-date-3"),
+  ];
+  const areaInput = form.querySelector("#reservation-area");
+  const vehicleInputs = [...form.querySelectorAll("[name='vehicle']")];
+  const breakInputs = [...form.querySelectorAll("[name='driving_break']")];
+  const privacyInput = form.querySelector("#reservation-privacy");
+
+  function createTextRule(input, errorId, requiredMessage) {
+    return {
+      controls: [input],
+      focusTarget: input,
+      container: input.closest(".form-field"),
+      error: form.querySelector(`#${errorId}`),
+      getError: () => (input.value.trim() ? "" : requiredMessage),
+    };
+  }
+
+  function createGroupRule(inputs, errorId, requiredMessage) {
+    return {
+      controls: inputs,
+      focusTarget: inputs[0],
+      container: inputs[0].closest(".form-group"),
+      error: form.querySelector(`#${errorId}`),
+      getError: () => (inputs.some((input) => input.checked) ? "" : requiredMessage),
+    };
+  }
+
+  const rules = [
+    createTextRule(nameInput, "reservation-name-error", "お名前を入力してください"),
+    {
+      controls: [emailInput],
+      focusTarget: emailInput,
+      container: emailInput.closest(".form-field"),
+      error: form.querySelector("#reservation-email-error"),
+      getError: () => {
+        if (!emailInput.value.trim()) {
+          return "メールアドレスを入力してください";
+        }
+
+        return emailInput.validity.typeMismatch ? "正しいメールアドレス形式で入力してください" : "";
+      },
+    },
+    createTextRule(telInput, "reservation-tel-error", "電話番号を入力してください"),
+    ...dateInputs.map((input, index) => {
+      return createTextRule(input, `reservation-date-${index + 1}-error`, "希望日時を入力してください");
+    }),
+    createTextRule(areaInput, "reservation-area-error", "希望エリアを入力してください"),
+    createGroupRule(vehicleInputs, "reservation-vehicle-error", "レッスン車両を選択してください"),
+    createGroupRule(breakInputs, "reservation-break-error", "運転ブランクを選択してください"),
+    {
+      controls: [privacyInput],
+      focusTarget: privacyInput,
+      container: privacyInput.closest(".form-group"),
+      error: form.querySelector("#reservation-privacy-error"),
+      getError: () => (privacyInput.checked ? "" : "プライバシーポリシーへの同意が必要です"),
+    },
+  ];
+
+  function showError(rule, message) {
+    rule.container.classList.add("is-invalid");
+    rule.error.textContent = message;
+    rule.error.hidden = false;
+    rule.controls.forEach((control) => control.setAttribute("aria-invalid", "true"));
+  }
+
+  function clearError(rule) {
+    rule.container.classList.remove("is-invalid");
+    rule.error.textContent = "";
+    rule.error.hidden = true;
+    rule.controls.forEach((control) => control.setAttribute("aria-invalid", "false"));
+  }
+
+  function updateVisibleError(event) {
+    const rule = rules.find((currentRule) => currentRule.controls.includes(event.target));
+
+    if (!rule || rule.error.hidden) {
+      return;
+    }
+
+    const message = rule.getError();
+
+    if (message) {
+      showError(rule, message);
+      return;
+    }
+
+    clearError(rule);
+  }
+
+  form.addEventListener("input", updateVisibleError);
+  form.addEventListener("change", updateVisibleError);
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    let firstInvalidRule = null;
+
+    rules.forEach((rule) => {
+      const message = rule.getError();
+
+      if (message) {
+        showError(rule, message);
+        firstInvalidRule ??= rule;
+        return;
+      }
+
+      clearError(rule);
+    });
+
+    if (firstInvalidRule) {
+      firstInvalidRule.focusTarget.focus();
+      return;
+    }
+
+    form.reset();
+    rules.forEach(clearError);
+    form.hidden = true;
+    completion.hidden = false;
+    completionTitle.focus();
+  });
+})();

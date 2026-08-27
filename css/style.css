@@ -1530,6 +1530,254 @@ p {
   margin-block-start: 2rem;
 }
 
+.reservation {
+  padding-block: 3rem var(--space-section);
+  background-color: var(--color-sub);
+  scroll-margin-block-start: 1rem;
+}
+
+.reservation__intro {
+  margin-block-start: 1.5rem;
+  font-size: 0.9375rem;
+  line-height: 2;
+}
+
+.reservation__intro p + p {
+  margin-block-start: 1rem;
+}
+
+.reservation__demo-note {
+  margin-block-start: 2rem;
+  padding: 1rem;
+  border-inline-start: 0.1875rem solid var(--color-main);
+  border-radius: var(--radius-small);
+  background-color: var(--color-white);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.reservation-form {
+  margin-block-start: 2.5rem;
+}
+
+.form-field,
+.form-group {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.reservation-form > .form-field,
+.reservation-form > .form-group {
+  padding-block: 1.5rem;
+  border-block-start: 0.0625rem solid color-mix(in srgb, var(--color-main) 45%, var(--color-white));
+}
+
+.reservation-form > .form-field:first-child {
+  padding-block-start: 0;
+  border-block-start: 0;
+}
+
+.form-field--nested + .form-field--nested {
+  margin-block-start: 1.25rem;
+}
+
+.form-field__heading,
+.form-legend {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.form-label,
+.form-legend {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.form-label {
+  display: inline-block;
+  margin-block-end: 0.5rem;
+}
+
+.form-field__heading .form-label {
+  margin-block-end: 0;
+}
+
+.form-status {
+  display: inline-flex;
+  min-width: 2.75rem;
+  min-height: 1.5rem;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 0.5rem;
+  border-radius: 999px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.form-status--required {
+  background-color: var(--color-deep);
+  color: var(--color-white);
+}
+
+.form-status--optional {
+  border: 0.0625rem solid var(--color-main);
+  background-color: var(--color-white);
+  color: var(--color-deep);
+}
+
+.form-control {
+  width: 100%;
+  min-width: 0;
+  min-height: 3.5rem;
+  margin-block-start: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: 0.0625rem solid var(--color-main);
+  border-radius: var(--radius-small);
+  background-color: var(--color-white);
+  color: var(--color-deep);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.form-control::placeholder {
+  color: color-mix(in srgb, var(--color-deep) 85%, var(--color-white));
+}
+
+.form-control:focus-visible {
+  border-color: var(--color-deep);
+}
+
+.form-control--textarea {
+  min-height: 9rem;
+  resize: vertical;
+}
+
+.form-help {
+  margin-block-start: 0.5rem;
+  font-size: 0.8125rem;
+  line-height: 1.7;
+}
+
+.form-options {
+  margin-block-start: 1rem;
+}
+
+.form-option {
+  display: flex;
+  min-height: 3.5rem;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: 0.0625rem solid var(--color-main);
+  border-radius: var(--radius-small);
+  background-color: var(--color-white);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  cursor: pointer;
+}
+
+.form-option + .form-option {
+  margin-block-start: 0.75rem;
+}
+
+.form-option:has(.form-option__input:checked) {
+  border-color: var(--color-deep);
+  box-shadow: inset 0 0 0 0.0625rem var(--color-deep);
+  font-weight: 600;
+}
+
+.form-option:has(.form-option__input:focus-visible) {
+  outline: 0.1875rem solid var(--color-deep);
+  outline-offset: 0.1875rem;
+}
+
+.form-option__input {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex: 0 0 auto;
+  margin: 0;
+  accent-color: var(--color-deep);
+}
+
+.form-option--privacy {
+  margin-block-start: 1rem;
+}
+
+.form-error {
+  margin-block-start: 0.5rem;
+  color: #8a3434;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.form-field.is-invalid .form-control,
+.form-group.is-invalid .form-option {
+  border-color: #8a3434;
+}
+
+.reservation-form__confirmation {
+  margin-block-start: 1.5rem;
+  padding: 1.25rem;
+  border: 0.0625rem solid var(--color-main);
+  border-radius: var(--radius-small);
+  background-color: var(--color-white);
+  font-size: 0.875rem;
+  line-height: 1.8;
+}
+
+.reservation-form__confirmation p + p {
+  margin-block-start: 0.5rem;
+}
+
+.reservation-form__confirmation strong {
+  font-weight: 600;
+}
+
+.reservation-form__submit {
+  margin-block-start: 1.5rem;
+}
+
+.reservation__completion {
+  margin-block-start: 2.5rem;
+  padding: 1.5rem;
+  border: 0.0625rem solid var(--color-main);
+  border-radius: var(--radius-medium);
+  background-color: var(--color-white);
+  font-size: 0.9375rem;
+  line-height: 1.9;
+}
+
+.reservation__completion-title {
+  margin: 0 0 1.25rem;
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.reservation__completion p + p {
+  margin-block-start: 0.75rem;
+}
+
+.reservation__completion strong {
+  font-weight: 600;
+}
+
+.reservation__completion-note {
+  padding-block-start: 1rem;
+  border-block-start: 0.0625rem solid var(--color-sub);
+  font-size: 0.8125rem;
+}
+
 .section-outline {
   padding-block: var(--space-section);
   border-block-start: 0.0625rem solid color-mix(in srgb, var(--color-main) 24%, transparent);
