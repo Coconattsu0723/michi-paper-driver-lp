@@ -581,9 +581,293 @@
         </div>
       </section>
 
-      <section id="driving-check" class="section-outline" aria-labelledby="driving-check-title">
+      <section id="driving-check" class="driving-check" aria-labelledby="driving-check-title">
         <div class="container">
-          <h2 id="driving-check-title">今の不安から、<br>最初の練習を見つけよう。</h2>
+          <header class="driving-check__header">
+            <p class="driving-check__label section-label">DRIVING CHECK</p>
+            <h2 id="driving-check-title" class="driving-check__title section-title">
+              今の不安から、<br>
+              最初の練習を見つけよう。
+            </h2>
+            <div class="driving-check__intro">
+              <p>久しぶりの運転で、何から始めればいいか分からなくても大丈夫。</p>
+              <p>
+                4つの質問から、今の不安や目的に合いそうな<br>
+                <strong>「最初の練習」</strong>を確認できます。
+              </p>
+            </div>
+            <p id="driving-check-note" class="driving-check__note">
+              <strong>このチェックは運転技量や安全性を判定するものではありません。実際のレッスン内容は、当日のヒアリングと運転状況を確認したうえで決定します。</strong>
+            </p>
+          </header>
+
+          <div class="driving-check__card">
+            <form id="driving-check-form" class="driving-check__form" novalidate>
+              <div class="driving-check__progress" hidden>
+                <p class="driving-check__progress-count">
+                  <span data-progress-current>01</span> / 04
+                </p>
+                <div
+                  class="driving-check__progress-track"
+                  role="progressbar"
+                  aria-label="質問の進行状況"
+                  aria-valuemin="1"
+                  aria-valuemax="4"
+                  aria-valuenow="1"
+                >
+                  <span class="driving-check__progress-value" data-progress-value></span>
+                </div>
+              </div>
+
+              <div class="driving-check__questions">
+                <fieldset class="driving-check__question" data-question="q1">
+                  <legend class="driving-check__question-title" tabindex="-1">
+                    <span class="driving-check__question-number">Question 01</span>
+                    最後に運転したのは、いつ頃ですか？
+                  </legend>
+                  <ul class="driving-check__choices">
+                    <li class="driving-check__choice">
+                      <input class="driving-check__radio" type="radio" name="q1" id="q1-recent" value="recent">
+                      <label class="driving-check__choice-label" for="q1-recent">
+                        <span class="driving-check__choice-indicator" aria-hidden="true"></span>
+                        <span>1年以内</span>
+                      </label>
+                    </li>
+                    <li class="driving-check__choice">
+                      <input class="driving-check__radio" type="radio" name="q1" id="q1-one-to-three" value="one-to-three">
+                      <label class="driving-check__choice-label" for="q1-one-to-three">
+                        <span class="driving-check__choice-indicator" aria-hidden="true"></span>
+                        <span>1〜3年前</span>
+                      </label>
+                    </li>
+                    <li class="driving-check__choice">
+                      <input class="driving-check__radio" type="radio" name="q1" id="q1-three-to-five" value="three-to-five">
+                      <label class="driving-check__choice-label" for="q1-three-to-five">
+                        <span class="driving-check__choice-indicator" aria-hidden="true"></span>
+                        <span>3〜5年前</span>
+                      </label>
+                    </li>
+                    <li class="driving-check__choice">
+                      <input class="driving-check__radio" type="radio" name="q1" id="q1-five-plus" value="five-plus">
+                      <label class="driving-check__choice-label" for="q1-five-plus">
+                        <span class="driving-check__choice-indicator" aria-hidden="true"></span>
+                        <span>5年以上前 / ほとんど運転していない</span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+
+                <fieldset class="driving-check__question" data-question="q2">
+                  <legend class="driving-check__question-title" tabindex="-1">
+                    <span class="driving-check__question-number">Question 02</span>
+                    今、一番不安なのはどれですか？
+                  </legend>
+                  <ul class="driving-check__choices">
+                    <li class="driving-check__choice">
+                      <input class="driving-check__radio" type="radio" name="q2" id="q2-road" value="road">
+                      <label class="driving-check__choice-label" for="q2-road">
+                        <span class="driving-check__choice-indicator" aria-hidden="true"></span>
+                        <span>久しぶりに公道を走ること</span>
+                      </label>
+                    </li>
+                    <li class="driving-check__choice">
+                      <input class="driving-check__radio" type="radio" name="q2" id="q2-parking" value="parking">
+                      <label class="driving-check__choice-label" for="q2-parking">
+                        <span class="driving-check__choice-indicator" aria-hidden="true"></span>
+                        <span>駐車</span>
+                      </label>
+                    </li>
+                    <li class="driving-check__choice">
+                      <input class="driving-check__radio" type="radio" name="q2" id="q2-narrow" value="narrow">
+                      <label class="driving-check__choice-label" for="q2-narrow">
+                        <span class="driving-check__choice-indicator" aria-hidden="true"></span>
+                        <span>狭い道やすれ違い</span>
+                      </label>
+                    </li>
+                    <li class="driving-check__choice">
+                      <input class="driving-check__radio" type="radio" name="q2" id="q2-lane" value="lane">
+                      <label class="driving-check__choice-label" for="q2-lane">
+                        <span class="driving-check__choice-indicator" aria-hidden="true"></span>
+                        <span>車線変更や交通量の多い道</span>
+                      </label>
+                    </li>
+                    <li class="driving-check__choice">
+                      <input class="driving-check__radio" type="radio" name="q2" id="q2-child" value="child">
+                      <label class="driving-check__choice-label" for="q2-child">
+                        <span class="driving-check__choice-indicator" aria-hidden="true"></span>
+                        <span>子どもを乗せて運転すること</span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+
+                <fieldset class="driving-check__question" data-question="q3">
+                  <legend class="driving-check__question-title" tabindex="-1">
+                    <span class="driving-check__question-number">Question 03</span>
+                    まず自分で運転できるようになりたいのは？
+                  </legend>
+                  <ul class="driving-check__choices">
+                    <li class="driving-check__choice">
+                      <input class="driving-check__radio" type="radio" name="q3" id="q3-neighborhood" value="neighborhood">
+                      <label class="driving-check__choice-label" for="q3-neighborhood">
+                        <span class="driving-check__choice-indicator" aria-hidden="true"></span>
+                        <span>自宅周辺・近所</span>
+                      </label>
+                    </li>
+                    <li class="driving-check__choice">
+                      <input class="driving-check__radio" type="radio" name="q3" id="q3-errands" value="errands">
+                      <label class="driving-check__choice-label" for="q3-errands">
+                        <span class="driving-check__choice-indicator" aria-hidden="true"></span>
+                        <span>スーパーや病院</span>
+                      </label>
+                    </li>
+                    <li class="driving-check__choice">
+                      <input class="driving-check__radio" type="radio" name="q3" id="q3-school" value="school">
+                      <label class="driving-check__choice-label" for="q3-school">
+                        <span class="driving-check__choice-indicator" aria-hidden="true"></span>
+                        <span>保育園・幼稚園・学校への送迎</span>
+                      </label>
+                    </li>
+                    <li class="driving-check__choice">
+                      <input class="driving-check__radio" type="radio" name="q3" id="q3-distance" value="distance">
+                      <label class="driving-check__choice-label" for="q3-distance">
+                        <span class="driving-check__choice-indicator" aria-hidden="true"></span>
+                        <span>少し離れた場所まで</span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+
+                <fieldset class="driving-check__question" data-question="q4">
+                  <legend class="driving-check__question-title" tabindex="-1">
+                    <span class="driving-check__question-number">Question 04</span>
+                    今の気持ちに一番近いものは？
+                  </legend>
+                  <ul class="driving-check__choices">
+                    <li class="driving-check__choice">
+                      <input class="driving-check__radio" type="radio" name="q4" id="q4-basic" value="basic">
+                      <label class="driving-check__choice-label" for="q4-basic">
+                        <span class="driving-check__choice-indicator" aria-hidden="true"></span>
+                        <span>まずは基本操作から確認したい</span>
+                      </label>
+                    </li>
+                    <li class="driving-check__choice">
+                      <input class="driving-check__radio" type="radio" name="q4" id="q4-focus" value="focus">
+                      <label class="driving-check__choice-label" for="q4-focus">
+                        <span class="driving-check__choice-indicator" aria-hidden="true"></span>
+                        <span>苦手なことを重点的に練習したい</span>
+                      </label>
+                    </li>
+                    <li class="driving-check__choice">
+                      <input class="driving-check__radio" type="radio" name="q4" id="q4-route" value="route">
+                      <label class="driving-check__choice-label" for="q4-route">
+                        <span class="driving-check__choice-indicator" aria-hidden="true"></span>
+                        <span>基本操作はできそうなので、実際のルートを走りたい</span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </div>
+
+              <p id="driving-check-error" class="driving-check__error" aria-live="polite"></p>
+
+              <div class="driving-check__controls" hidden>
+                <button class="driving-check__next" type="button" data-check-next>次へ</button>
+                <button class="driving-check__previous" type="button" data-check-previous>前の質問へ戻る</button>
+              </div>
+            </form>
+
+            <div id="driving-check-result" class="driving-check__result" aria-live="polite" hidden>
+              <article class="driving-check__result-item" data-result="basic" hidden>
+                <header class="driving-check__result-header">
+                  <p class="driving-check__result-label">RESULT 01</p>
+                  <h3 class="driving-check__result-type" tabindex="-1">まずは近所からタイプ</h3>
+                  <p class="driving-check__result-main">
+                    <strong>久しぶりの運転は、<br>基本を思い出すところから。</strong>
+                  </p>
+                </header>
+                <div class="driving-check__result-text">
+                  <p>
+                    シートやミラーの調整、ペダルや基本操作を確認してから、<br>
+                    交通量の少ない自宅周辺をゆっくり走る練習がおすすめです。
+                  </p>
+                  <p>最初から目的地まで行く必要はありません。</p>
+                  <p>まずは、<strong>「車を動かすことに少し慣れる」</strong>ところから始めましょう。</p>
+                </div>
+                <div class="driving-check__practice">
+                  <p class="driving-check__practice-title">おすすめ練習</p>
+                  <ol class="driving-check__practice-list">
+                    <li>基本操作確認</li>
+                    <li>自宅周辺</li>
+                    <li>右左折</li>
+                    <li>短い生活ルート</li>
+                  </ol>
+                </div>
+              </article>
+
+              <article class="driving-check__result-item" data-result="focus" hidden>
+                <header class="driving-check__result-header">
+                  <p class="driving-check__result-label">RESULT 02</p>
+                  <h3 class="driving-check__result-type" tabindex="-1">苦手をじっくりタイプ</h3>
+                  <p class="driving-check__result-main">
+                    <strong>不安なところを、<br>ひとつずつ練習してみましょう。</strong>
+                  </p>
+                </header>
+                <div class="driving-check__result-text">
+                  <p>
+                    駐車、狭い道、車線変更など、<br>
+                    特定の場面に強い不安がある場合は、その部分を重点的に練習できます。
+                  </p>
+                  <p>全部を一度にできるようにする必要はありません。</p>
+                  <p><strong>「今日は駐車だけ」</strong>というレッスンでも大丈夫です。</p>
+                </div>
+                <div class="driving-check__practice">
+                  <p class="driving-check__practice-title">おすすめ練習</p>
+                  <ol class="driving-check__practice-list">
+                    <li>現在の運転確認</li>
+                    <li>苦手項目を重点練習</li>
+                    <li>生活ルートで実践</li>
+                  </ol>
+                </div>
+              </article>
+
+              <article class="driving-check__result-item" data-result="route" hidden>
+                <header class="driving-check__result-header">
+                  <p class="driving-check__result-label">RESULT 03</p>
+                  <h3 class="driving-check__result-type" tabindex="-1">いつもの道を実践タイプ</h3>
+                  <p class="driving-check__result-main">
+                    <strong>ゴールは、<br>いつもの道を自分で走ること。</strong>
+                  </p>
+                </header>
+                <div class="driving-check__result-text">
+                  <p>
+                    基本操作への不安が比較的小さく、<br>
+                    送迎や買い物など具体的な目的がある方は、
+                  </p>
+                  <p>実際にこれから使いたいルートを中心に練習する方法がおすすめです。</p>
+                  <p>交差点や駐車など途中の不安も確認しながら、</p>
+                  <p><strong>「ここなら一人でも行けそう」</strong>と思える範囲を少しずつ増やします。</p>
+                </div>
+                <div class="driving-check__practice">
+                  <p class="driving-check__practice-title">おすすめ練習</p>
+                  <ol class="driving-check__practice-list">
+                    <li>ルート確認</li>
+                    <li>実際の生活道路</li>
+                    <li>目的地での駐車</li>
+                    <li>振り返り</li>
+                  </ol>
+                </div>
+              </article>
+
+              <div class="driving-check__result-actions">
+                <a class="button button--primary" href="#reservation">
+                  <span>初回90分講習を予約する</span>
+                  <span class="button__arrow" aria-hidden="true">→</span>
+                </a>
+                <button class="driving-check__reset" type="button" data-check-reset>もう一度チェックする</button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
