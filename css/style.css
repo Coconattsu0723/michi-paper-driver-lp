@@ -1,0 +1,250 @@
+:root {
+  --color-base: #faf8f3;
+  --color-main: #7896a1;
+  --color-deep: #354a52;
+  --color-sub: #dce6e8;
+  --color-accent: #e5ad82;
+  --color-white: #ffffff;
+
+  --font-ja: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  --font-en: "DM Sans", sans-serif;
+
+  --container-max: 70rem;
+  --container-gutter: 1.25rem;
+  --space-section: 4rem;
+  --radius-small: 0.5rem;
+  --radius-medium: 0.75rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-base);
+  color: var(--color-deep);
+  font-family: var(--font-ja);
+  font-size: 1rem;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+  color: inherit;
+  font: inherit;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+p {
+  margin-block: 0;
+}
+
+:focus-visible {
+  outline: 0.1875rem solid var(--color-deep);
+  outline-offset: 0.1875rem;
+}
+
+.container {
+  width: min(calc(100% - (var(--container-gutter) * 2)), var(--container-max));
+  margin-inline: auto;
+}
+
+.site-header {
+  background-color: var(--color-base);
+}
+
+.site-header__inner {
+  display: flex;
+  min-height: 4.5rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-logo {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  min-height: 2.75rem;
+}
+
+.site-logo__image {
+  width: 9.375rem;
+  height: auto;
+}
+
+.menu-button {
+  display: inline-flex;
+  width: 3.25rem;
+  min-height: 3.25rem;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  border: 0.0625rem solid color-mix(in srgb, var(--color-main) 55%, transparent);
+  border-radius: var(--radius-small);
+}
+
+.menu-button__label {
+  font-family: var(--font-en);
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1;
+}
+
+.menu-button__icon {
+  display: grid;
+  width: 1.25rem;
+  gap: 0.3125rem;
+}
+
+.menu-button__icon span {
+  width: 100%;
+  height: 0.0625rem;
+  background-color: currentcolor;
+}
+
+.site-nav {
+  display: none;
+}
+
+.hero {
+  padding-block-end: var(--space-section);
+}
+
+.hero__media {
+  width: calc(100% - 1rem);
+  margin-inline: auto;
+  overflow: hidden;
+  border-radius: var(--radius-medium);
+}
+
+.hero__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero__content {
+  padding-block-start: 2rem;
+}
+
+.hero__brand-message {
+  color: var(--color-deep);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.hero__title {
+  margin-block-start: 0.75rem;
+  font-size: clamp(1.75rem, 7.5vw, 2rem);
+  font-weight: 600;
+  letter-spacing: 0.015em;
+  line-height: 1.5;
+}
+
+.hero__title span {
+  display: block;
+}
+
+.hero__description {
+  margin-block-start: 1.25rem;
+  font-size: 0.9375rem;
+  line-height: 2;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 3.5rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  border-radius: var(--radius-small);
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.button--primary {
+  width: 100%;
+  margin-block-start: 1.75rem;
+  padding: 0.875rem 1.25rem;
+  background-color: var(--color-accent);
+  color: var(--color-deep);
+}
+
+.button__arrow {
+  flex: 0 0 auto;
+  font-family: var(--font-en);
+  font-size: 1.125rem;
+  line-height: 1;
+}
+
+.section-outline {
+  padding-block: var(--space-section);
+  border-block-start: 0.0625rem solid color-mix(in srgb, var(--color-main) 24%, transparent);
+  scroll-margin-block-start: 1rem;
+}
+
+.section-outline h2 {
+  max-width: 24rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.site-footer {
+  padding-block: 3rem;
+  background-color: var(--color-base);
+}
+
+.site-footer__logo {
+  width: 10rem;
+  height: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
