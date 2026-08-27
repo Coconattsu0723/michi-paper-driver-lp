@@ -310,6 +310,100 @@ p {
   line-height: 1.9;
 }
 
+.concept {
+  padding-block: 3rem var(--space-section);
+  background-color: var(--color-sub);
+  scroll-margin-block-start: 1rem;
+}
+
+.concept__label {
+  position: relative;
+  padding-inline-start: 1.75rem;
+  color: var(--color-deep);
+  font-family: var(--font-en);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  line-height: 1.2;
+}
+
+.concept__label::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1rem;
+  height: 0.0625rem;
+  background-color: var(--color-main);
+  content: "";
+  transform: translateY(-50%);
+}
+
+.concept__title {
+  margin-block-start: 1rem;
+  font-size: clamp(1.5rem, 6.4vw, 1.75rem);
+  font-weight: 600;
+  letter-spacing: 0.015em;
+  line-height: 1.55;
+}
+
+.concept__media {
+  margin-block-start: 2rem;
+  overflow: hidden;
+  border-radius: var(--radius-medium);
+  background-color: var(--color-base);
+}
+
+.concept__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.concept__body {
+  margin-block-start: 2rem;
+}
+
+.concept__intro,
+.concept__text {
+  font-size: 0.9375rem;
+  line-height: 2;
+}
+
+.concept__intro p + p,
+.concept__text p + p {
+  margin-block-start: 1rem;
+}
+
+.concept__text {
+  margin-block-start: 2rem;
+  padding-block-start: 2rem;
+  border-block-start: 0.0625rem solid color-mix(in srgb, var(--color-main) 42%, transparent);
+}
+
+.concept__text strong {
+  font-weight: 600;
+}
+
+.concept__closing {
+  margin-block-start: 2.5rem;
+  font-size: 1.125rem;
+  letter-spacing: 0.015em;
+  line-height: 1.9;
+}
+
+.concept__closing::before {
+  display: block;
+  width: 2rem;
+  height: 0.0625rem;
+  margin-block-end: 1rem;
+  background-color: var(--color-main);
+  content: "";
+}
+
+.concept__closing strong {
+  font-weight: 600;
+}
+
 .section-outline {
   padding-block: var(--space-section);
   border-block-start: 0.0625rem solid color-mix(in srgb, var(--color-main) 24%, transparent);
