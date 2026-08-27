@@ -25,10 +25,12 @@
 | Lesson Route Photo | `lesson-route.png` | `assets/images/photos/` | 送迎ルートを想定した住宅街での練習を示す | 正式採用済み | Lessonセクション候補 |
 | Lesson Parking Photo | `lesson-parking.png` | `assets/images/photos/` | スーパーや施設駐車場での練習を示す | 正式採用済み | Lessonセクション候補 |
 | Lesson Driving Practice Photo | `lesson-driving-practice.png` | `assets/images/photos/` | 利用者が運転し、Instructorが助手席から支援する様子を示す | 正式採用済み | Instructor Lessonとの兼用可能 |
-| Instructor Portrait | `instructor-portrait.png` | `assets/images/photos/` | Instructorへの信頼形成 | 正式採用済み | 利用者モデルとは別人物 |
+| Instructor Portrait | `instructor-portrait.png` | `assets/images/photos/` | 男性Instructor「佐倉 遼」への信頼形成 | 正式採用済み | 日本人男性・30代後半の正式人物設定。利用者モデルとは別人物 |
 | Final CTA Photo | `final-cta.png` | `assets/images/photos/` | 運転が日常になったあとの変化を見せる | 正式採用済み | Heroとは異なる心理段階を担当 |
 
 写真は当初最大8点程度、兼用できる場合は7点程度まで減らす方針としていた。Instructor LessonはLesson Driving Practiceと兼用し、正式写真は7点で整理済み。
+
+`assets/images/photos/instructor-portrait.png` は正式採用済みの実ファイルとして格納済み。今回、画像自体の編集・リネームは行わない。
 
 ---
 

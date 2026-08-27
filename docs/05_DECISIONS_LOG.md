@@ -348,7 +348,34 @@ Problem〜Reservation Formまで、今回提示された見出し・導入文・
 
 ---
 
-# 7. OPEN DECISIONS
+# 7. INSTRUCTOR DECISIONS
+
+## Decision 15: 正式Instructorを男性の佐倉 遼に確定
+
+### Decision
+
+正式Instructorは、男性の**佐倉 遼（さくら りょう）**とする。
+
+表記：
+
+```text
+michi Instructor
+佐倉 遼
+```
+
+### Reason
+
+正式採用したInstructor Portraitが男性であり、写真と人物設定を一致させるため。また、落ち着き・やさしさ・頼もしさがmichiのブランド人格と一致するため。
+
+### Alternative / Non-adopted direction
+
+旧女性Instructor設定（佐倉 真帆を含む）は正式採用前の仮案として扱い、正式設定には採用しない。
+
+具体的な勤務年数、資格名、所属教習所名は未確定のため、勝手に追加しない。
+
+---
+
+# 8. OPEN DECISIONS
 
 以下は未確定のため、Decisionとして確定しない。
 
@@ -356,7 +383,7 @@ Problem〜Reservation Formまで、今回提示された見出し・導入文・
 - English Fontの最終選定（Inter / DM Sans）
 - 対応エリアの最終確定（現在は第一案）
 - キャンセル条件の最終確定（現在は第一案）
-- Instructorの正式人物名・経歴詳細
+- Instructorの具体的な勤務年数・資格名・所属教習所名
 - Safetyの具体的な補償内容・適用条件
 - Driving Check各結果の詳細本文・おすすめ練習フロー・CTA・分岐挙動
 - Flow各STEPの本文
@@ -373,7 +400,7 @@ Problem〜Reservation Formまで、今回提示された見出し・導入文・
 
 ---
 
-# 8. STATUS NOTE
+# 9. STATUS NOTE
 
 元の `00_PROJECT_BRIEF.md` にあった「正式画像制作、ロゴ制作、Git / GitHubが未着手」という進行状況は、その後の作業で更新された。
 
