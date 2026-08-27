@@ -324,7 +324,31 @@ Mobile Firstで375pxを最初に完成させ、375 → 390 → 768 → 1024 → 
 
 ---
 
-# 6. OPEN DECISIONS
+# 6. COPY DECISIONS
+
+## Decision 14: Problem〜Reservation Formの主要本文コピーを正式確定する
+
+### Decision
+
+Problem〜Reservation Formまで、今回提示された見出し・導入文・本文・締め・設問・項目・CTAなどの主要コピーを `01_CONTENT_STRUCTURE.md` の正式コピーとして確定する。
+
+添付に実文が記載されていない詳細本文は新規作成せず、未確定として残す。
+
+### Reason
+
+- HTML実装前に正式テキストを固定する
+- 実装時にAIが文章を勝手に補完しないようにする
+- デザインと情報設計の基準を作る
+
+### Alternative / Non-adopted direction
+
+- 実装時にコピーを都度補完する
+- 提示されたコピーを要約・短縮・言い換えする
+- 未提示の詳細本文を推測で作成する
+
+---
+
+# 7. OPEN DECISIONS
 
 以下は未確定のため、Decisionとして確定しない。
 
@@ -333,10 +357,15 @@ Mobile Firstで375pxを最初に完成させ、375 → 390 → 768 → 1024 → 
 - 対応エリアの最終確定（現在は第一案）
 - キャンセル条件の最終確定（現在は第一案）
 - Instructorの正式人物名・経歴詳細
-- Problem以降の各セクションの正式本文コピー
-- Driving Checkの正式設問・選択肢・結果文・挙動
-- FAQの正式質問文・回答文
-- Reservation Formの送信先・処理・エラー文・完了文
+- Safetyの具体的な補償内容・適用条件
+- Driving Check各結果の詳細本文・おすすめ練習フロー・CTA・分岐挙動
+- Flow各STEPの本文
+- Voice 3件のBefore・Lesson・After本文
+- Priceの初回90分含有内容・おすすめ対象・通常120分説明・3回パック例・プラン選び説明
+- FAQ 10問の正式回答文
+- Reservation Formの正式な選択肢・placeholder・具体的なエラー文
+- Reservation Formの送信先・送信方法・処理
+- 悪天候時ルールとキャンセル条件の公開前最終確認
 - Container、Spacing、Border Radius、breakpointなどの正式数値
 - OGP
 - favicon
@@ -344,7 +373,7 @@ Mobile Firstで375pxを最初に完成させ、375 → 390 → 768 → 1024 → 
 
 ---
 
-# 7. STATUS NOTE
+# 8. STATUS NOTE
 
 元の `00_PROJECT_BRIEF.md` にあった「正式画像制作、ロゴ制作、Git / GitHubが未着手」という進行状況は、その後の作業で更新された。
 
