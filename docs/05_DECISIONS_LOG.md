@@ -430,7 +430,31 @@ michi Instructor
 
 ---
 
-# 9. OPEN DECISIONS
+# 9. SAFETY ASSET DECISIONS
+
+## Decision 18: Safetyアイコンを正式採用PNG7点へ統一
+
+### Decision
+
+Safetyセクションは、補助ブレーキ、事前ヒアリング、無理に公道へ出ない、万一への備え、インストラクター、車を選べる、子どもの同乗に対応する正式採用PNG7点を使用する。
+
+旧3点のみのPNG運用と、実装途中のinline SVG方針は正式方針として採用しない。
+
+### Reason
+
+- 旧Safetyアイコンは、一部項目にしか画像がなく、統一感と意味の分かりやすさに課題があった
+- 7項目すべてに対応する正式素材を揃え、Safetyセクションを視覚的に一貫させる
+- 見出しとアイコンの対応を明確にし、安全への取り組みを直感的に理解しやすくする
+
+### Alternative / Non-adopted direction
+
+- 一部項目のみPNGを使用し、残りをテキストだけで構成する
+- Safetyアイコンをinline SVGで実装する
+- 用途の異なるアイコンを同一素材で代用する
+
+---
+
+# 10. OPEN DECISIONS
 
 以下は未確定のため、Decisionとして確定しない。
 
@@ -453,8 +477,8 @@ michi Instructor
 
 ---
 
-# 10. STATUS NOTE
+# 11. STATUS NOTE
 
 元の `00_PROJECT_BRIEF.md` にあった「正式画像制作、ロゴ制作、Git / GitHubが未着手」という進行状況は、その後の作業で更新された。
 
-現在は、正式写真7点、Safetyアイコン3点、ロゴ1点をプロジェクトへ格納済みで、ローカルGit管理と初回commitまで完了している。GitHub remote、push、HTML / CSS / JavaScript実装、公開、OGP、faviconは未着手。
+現在は、正式写真7点、Safetyアイコン7点、ロゴ1点をプロジェクトへ格納済みで、ローカルGit管理と初回commitまで完了している。GitHub remote、push、HTML / CSS / JavaScript実装、公開、OGP、faviconは未着手。

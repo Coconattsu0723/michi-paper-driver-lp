@@ -575,6 +575,110 @@ p {
   font-weight: 600;
 }
 
+.safety {
+  padding-block: 3rem var(--space-section);
+  background-color: var(--color-base);
+  scroll-margin-block-start: 1rem;
+}
+
+.safety__intro {
+  margin-block-start: 1.5rem;
+  font-size: 0.9375rem;
+  line-height: 2;
+}
+
+.safety__intro p + p {
+  margin-block-start: 1rem;
+}
+
+.safety__list {
+  margin-block-start: 3rem;
+  border-block-start: 0.0625rem solid var(--color-sub);
+}
+
+.safety__item {
+  padding-block: 2.5rem;
+  border-block-end: 0.0625rem solid var(--color-sub);
+}
+
+.safety__icon {
+  display: block;
+  width: 7.5rem;
+  height: 5rem;
+  margin-block-end: 1.25rem;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.safety__item-label {
+  color: var(--color-deep);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+}
+
+.safety__item-number {
+  font-family: var(--font-en);
+  font-weight: 600;
+}
+
+.safety__item-title,
+.safety__child-title {
+  margin: 0.75rem 0 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+}
+
+.safety__item-text,
+.safety__child-text {
+  margin-block-start: 1rem;
+  font-size: 0.9375rem;
+  line-height: 2;
+}
+
+.safety__item-text p + p,
+.safety__child-text p + p {
+  margin-block-start: 1rem;
+}
+
+.safety__child {
+  margin-block-start: 3rem;
+  padding: 1.5rem;
+  border-block-start: 0.1875rem solid var(--color-main);
+  border-radius: var(--radius-small);
+  background-color: var(--color-sub);
+}
+
+.safety__child-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+}
+
+.safety__closing {
+  margin-block-start: 3rem;
+  font-size: 1.125rem;
+  letter-spacing: 0.015em;
+  line-height: 1.9;
+}
+
+.safety__closing::before {
+  display: block;
+  width: 2rem;
+  height: 0.0625rem;
+  margin-block-end: 1rem;
+  background-color: var(--color-main);
+  content: "";
+}
+
+.safety__closing strong {
+  font-weight: 600;
+}
+
 .section-outline {
   padding-block: var(--space-section);
   border-block-start: 0.0625rem solid color-mix(in srgb, var(--color-main) 24%, transparent);

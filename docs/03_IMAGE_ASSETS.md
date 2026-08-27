@@ -39,10 +39,14 @@
 | 素材名 | 英字ファイル名 | 格納先 | 用途 | 状態 | 備考 |
 |---|---|---|---|---|---|
 | Auxiliary Brake Icon | `safety-auxiliary-brake.png` | `assets/images/icons/` | 補助ブレーキ対応を視覚化 | 正式採用済み | PNG、透過情報を維持 |
+| Pre-Lesson Hearing Icon | `safety-pre-lesson-hearing.png` | `assets/images/icons/` | 事前ヒアリングと対話を視覚化 | 正式採用済み | PNG、透過情報を維持 |
+| No Rush Road Icon | `safety-no-rush-road.png` | `assets/images/icons/` | 無理に公道へ出ず、安全を確認して進む方針を視覚化 | 正式採用済み | PNG、透過情報を維持 |
 | Insurance Support Icon | `safety-insurance-support.png` | `assets/images/icons/` | 保険・事故時の対応を視覚化 | 正式採用済み | PNG、透過情報を維持 |
-| Own Car & Lesson Car Icon | `safety-own-lesson-car.png` | `assets/images/icons/` | 自家用車 / 講習車の選択肢を視覚化 | 正式採用済み | PNG、透過情報を維持 |
+| Instructor Support Icon | `safety-instructor-support.png` | `assets/images/icons/` | Instructorによる落ち着いた安全サポートを視覚化 | 正式採用済み | PNG、透過情報を維持 |
+| Choose Car Icon | `safety-choose-car.png` | `assets/images/icons/` | 自家用車 / 講習車を選べることを視覚化 | 正式採用済み | PNG、透過情報を維持 |
+| Child Passenger Icon | `safety-child-passenger.png` | `assets/images/icons/` | 子どもの同乗ルールと親子での運転を視覚化 | 正式採用済み | PNG、透過情報を維持 |
 
-Safetyで扱う「事前ヒアリング」「無理に公道へ出ない」「インストラクター研修」は正式本文未確定。追加の画像生成素材は現時点で未制作とし、必要性とSVG/UIでの表現可否を実装前に判断する。
+Safetyセクションのアイコンは、上記7点の正式採用PNGで統一する。各アイコンは対応する見出し・本文を補助する装飾素材として使用し、透過情報を維持する。
 
 ---
 
