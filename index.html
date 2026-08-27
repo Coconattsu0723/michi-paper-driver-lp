@@ -1884,10 +1884,13 @@
                 プライバシーポリシー同意
                 <span class="form-status form-status--required" aria-hidden="true">必須</span>
               </legend>
-              <label class="form-option form-option--privacy">
-                <input id="reservation-privacy" class="form-option__input" name="privacy" type="checkbox" required aria-invalid="false" aria-describedby="reservation-privacy-error">
-                <span>プライバシーポリシーに同意する</span>
-              </label>
+              <div class="form-option form-option--privacy">
+                <input id="reservation-privacy" class="form-option__input" name="privacy" type="checkbox" required aria-invalid="false" aria-describedby="reservation-privacy-error" aria-labelledby="reservation-privacy-policy-link reservation-privacy-consent-label">
+                <span class="form-option__privacy-text">
+                  <a id="reservation-privacy-policy-link" class="form-option__policy-link" href="#privacy">プライバシーポリシー</a>に
+                  <label id="reservation-privacy-consent-label" class="form-option__privacy-label" for="reservation-privacy">同意する</label>
+                </span>
+              </div>
               <p id="reservation-privacy-error" class="form-error" hidden></p>
             </fieldset>
 
@@ -1912,6 +1915,57 @@
             <p><strong>確認メールをもって、予約確定となります。</strong></p>
             <p class="reservation__completion-note">ポートフォリオ用デモのため、実際の送信は行われていません。</p>
           </section>
+        </div>
+      </section>
+
+      <section id="privacy" class="privacy" aria-labelledby="privacy-title">
+        <div class="container">
+          <header class="privacy__header">
+            <p class="privacy__label section-label">PRIVACY POLICY</p>
+            <h2 id="privacy-title" class="privacy__title section-title">プライバシーポリシー</h2>
+            <div class="privacy__intro">
+              <p>このサイトは、Webデザインのポートフォリオ用に制作した架空サービス「michi PAPER DRIVER LESSON」のデモサイトです。</p>
+              <p>Reservation Formは操作体験を確認するためのデモ機能であり、入力された情報が実際に送信・保存されることはありません。</p>
+            </div>
+          </header>
+
+          <div class="privacy__content">
+            <section class="privacy__item" aria-labelledby="privacy-item-01-title">
+              <h3 id="privacy-item-01-title" class="privacy__item-title">
+                <span class="privacy__number">01｜</span>
+                <span>入力情報について</span>
+              </h3>
+              <p>Reservation Formでは、お名前、メールアドレス、電話番号、希望日時などを入力できる設計になっています。</p>
+              <p>ただし、このサイトでは入力内容を外部サーバーへ送信せず、データベースやlocalStorage等への保存も行いません。</p>
+            </section>
+
+            <section class="privacy__item" aria-labelledby="privacy-item-02-title">
+              <h3 id="privacy-item-02-title" class="privacy__item-title">
+                <span class="privacy__number">02｜</span>
+                <span>第三者への提供について</span>
+              </h3>
+              <p>このデモサイトでは、入力された情報を第三者へ提供することはありません。</p>
+            </section>
+
+            <section class="privacy__item" aria-labelledby="privacy-item-03-title">
+              <h3 id="privacy-item-03-title" class="privacy__item-title">
+                <span class="privacy__number">03｜</span>
+                <span>利用目的について</span>
+              </h3>
+              <p>Formは、実際の予約受付を目的としたものではなく、ポートフォリオ作品としてForm UI・Validation・送信完了表示などの実装を確認するために設置しています。</p>
+            </section>
+
+            <section class="privacy__item" aria-labelledby="privacy-item-04-title">
+              <h3 id="privacy-item-04-title" class="privacy__item-title">
+                <span class="privacy__number">04｜</span>
+                <span>実際の予約について</span>
+              </h3>
+              <p>このサイトから実際の予約・問い合わせはできません。</p>
+              <p>入力・送信操作を行っても、michiから連絡が届くことはありません。</p>
+            </section>
+          </div>
+
+          <p class="privacy__closing"><strong>個人情報を入力する必要はありません。Formを試す場合は、ダミー情報をご使用ください。</strong></p>
         </div>
       </section>
     </main>
@@ -1945,7 +1999,7 @@
         </nav>
 
         <div class="site-footer__meta">
-          <p class="site-footer__privacy">Privacy Policy</p>
+          <p class="site-footer__privacy"><a href="#privacy">Privacy Policy</a></p>
           <p class="site-footer__note">このサイトはポートフォリオ用に制作した架空サービスです。</p>
           <p class="site-footer__copyright">© michi</p>
         </div>

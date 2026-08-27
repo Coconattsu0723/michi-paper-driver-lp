@@ -502,7 +502,32 @@ FAQ Q1〜Q8の正式回答を確定し、`01_CONTENT_STRUCTURE.md`へ反映す�
 
 ---
 
-# 12. OPEN DECISIONS
+# 12. PRIVACY POLICY DECISIONS
+
+## Decision 21: 1ページ内に簡易Privacy Policyを設ける
+
+### Decision
+
+ポートフォリオ用ダミーFormとの整合性を取るため、Reservation FormとFooterの間に簡易Privacy Policyセクションを追加する。
+
+Reservation FormとFooterのPrivacy Policy表示は、同一ページ内の`#privacy`へリンクする。
+
+### Reason
+
+- FormでPrivacy Policy同意を必須としているため
+- 実際にはデータを送信・保存しないことを明示するため
+- 入力情報を第三者へ提供せず、実予約も受け付けないデモであることを示すため
+- 架空サービスを実在サービスと誤認させないため
+
+### Alternative / Non-adopted direction
+
+- 読めるPrivacy Policyがないまま同意だけを必須にする
+- 実在企業向けの複雑な個人情報保護方針を追加する
+- 今回の工程で別HTMLページを作成する
+
+---
+
+# 13. OPEN DECISIONS
 
 以下は未確定のため、Decisionとして確定しない。
 
@@ -516,7 +541,6 @@ FAQ Q1〜Q8の正式回答を確定し、`01_CONTENT_STRUCTURE.md`へ反映す�
 - Voice 3件のBefore・Lesson・After本文
 - Priceの初回90分含有内容・おすすめ対象・通常120分説明・3回パック例・プラン選び説明
 - Reservation Formの正式な選択肢・placeholder・具体的なエラー文
-- Reservation Formの送信先・送信方法・処理
 - Container、Spacing、Border Radius、breakpointなどの正式数値
 - OGP
 - favicon
@@ -524,7 +548,7 @@ FAQ Q1〜Q8の正式回答を確定し、`01_CONTENT_STRUCTURE.md`へ反映す�
 
 ---
 
-# 13. STATUS NOTE
+# 14. STATUS NOTE
 
 元の `00_PROJECT_BRIEF.md` にあった「正式画像制作、ロゴ制作、Git / GitHubが未着手」という進行状況は、その後の作業で更新された。
 
