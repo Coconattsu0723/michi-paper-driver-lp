@@ -454,7 +454,33 @@ Safetyセクションは、補助ブレーキ、事前ヒアリング、無理�
 
 ---
 
-# 10. OPEN DECISIONS
+# 10. VOICE ASSET DECISIONS
+
+## Decision 19: Voiceでは共通の抽象人物アイコン1点を使用
+
+### Decision
+
+Voiceでは人物写真を使わず、3件すべてに共通の抽象人物アイコン1点を使用する。
+
+### Reason
+
+- 架空サービスで複数AI人物を並べることによる不自然さを避ける
+- Voiceの内容を主役にする
+- 視覚的な統一感を持たせる
+- 特定人物の体験談写真だと誤認させない
+
+### Documentation update
+
+VoiceのBefore / Lesson / After本文はすでに正式確定済みだったが、`01_CONTENT_STRUCTURE.md`への反映漏れがあったため、実装済みの正式コピーに合わせて正本を更新した。
+
+### Alternative / Non-adopted direction
+
+- Voiceごとに異なる人物写真を使用する
+- 共通アイコンを特定利用者の顔写真のように扱う
+
+---
+
+# 11. OPEN DECISIONS
 
 以下は未確定のため、Decisionとして確定しない。
 
@@ -477,7 +503,7 @@ Safetyセクションは、補助ブレーキ、事前ヒアリング、無理�
 
 ---
 
-# 11. STATUS NOTE
+# 12. STATUS NOTE
 
 元の `00_PROJECT_BRIEF.md` にあった「正式画像制作、ロゴ制作、Git / GitHubが未着手」という進行状況は、その後の作業で更新された。
 

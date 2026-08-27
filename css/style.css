@@ -1230,6 +1230,114 @@ p {
   font-weight: 600;
 }
 
+.voice {
+  padding-block: 3rem var(--space-section);
+  background-color: var(--color-sub);
+  scroll-margin-block-start: 1rem;
+}
+
+.voice__intro {
+  margin-block-start: 1.5rem;
+  font-size: 0.9375rem;
+  line-height: 2;
+}
+
+.voice__intro p + p {
+  margin-block-start: 1rem;
+}
+
+.voice__list {
+  margin-block-start: 3rem;
+}
+
+.voice-card {
+  padding: 1.5rem;
+  border: 0.0625rem solid color-mix(in srgb, var(--color-main) 35%, var(--color-white));
+  border-block-start: 0.1875rem solid var(--color-main);
+  border-radius: var(--radius-medium);
+  background-color: var(--color-white);
+}
+
+.voice-card + .voice-card {
+  margin-block-start: 2rem;
+}
+
+.voice-card__person {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.voice-card__icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.voice-card__title {
+  margin: 1rem 0 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.voice-card__meta {
+  margin: 0;
+  color: var(--color-main);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.voice-card__section {
+  margin-block-start: 1.75rem;
+  padding-block-start: 1.5rem;
+  border-block-start: 0.0625rem solid var(--color-sub);
+}
+
+.voice-card__phase {
+  color: var(--color-main);
+  font-family: var(--font-en);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+}
+
+.voice-card__text {
+  margin-block-start: 0.75rem;
+  font-size: 0.9375rem;
+  line-height: 2;
+}
+
+.voice-card__text p + p {
+  margin-block-start: 1rem;
+}
+
+.voice-card__text strong {
+  font-weight: 600;
+}
+
+.voice__closing {
+  margin-block-start: 3rem;
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.voice__closing::before {
+  display: block;
+  width: 2rem;
+  height: 0.0625rem;
+  margin-block-end: 1rem;
+  background-color: var(--color-main);
+  content: "";
+}
+
+.voice__closing strong {
+  font-weight: 600;
+}
+
 .section-outline {
   padding-block: var(--space-section);
   border-block-start: 0.0625rem solid color-mix(in srgb, var(--color-main) 24%, transparent);
