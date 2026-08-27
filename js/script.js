@@ -5,15 +5,18 @@
   const menuButton = header?.querySelector(".menu-button");
   const menuLabel = menuButton?.querySelector(".menu-button__label");
   const navigation = document.querySelector("#primary-navigation");
+  const desktopNavigation = window.matchMedia("(min-width: 64rem)");
 
   if (!header || !menuButton || !menuLabel || !navigation) {
     return;
   }
 
   function setMenuState(isOpen, returnFocus = false) {
-    menuButton.setAttribute("aria-expanded", String(isOpen));
-    menuLabel.textContent = isOpen ? "CLOSE" : "MENU";
-    navigation.hidden = !isOpen;
+    const nextOpen = desktopNavigation.matches ? false : isOpen;
+
+    menuButton.setAttribute("aria-expanded", String(nextOpen));
+    menuLabel.textContent = nextOpen ? "CLOSE" : "MENU";
+    navigation.hidden = desktopNavigation.matches ? false : !nextOpen;
 
     if (returnFocus) {
       menuButton.focus();
@@ -50,6 +53,10 @@
     if (event.key === "Escape" && isOpen) {
       setMenuState(false, true);
     }
+  });
+
+  desktopNavigation.addEventListener("change", () => {
+    setMenuState(false);
   });
 
   header.classList.add("is-menu-enhanced");
