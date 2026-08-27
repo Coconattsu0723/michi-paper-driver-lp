@@ -147,7 +147,7 @@ p {
 }
 
 .hero {
-  padding-block-end: var(--space-section);
+  padding-block-end: 2rem;
 }
 
 .hero__media {
@@ -218,6 +218,96 @@ p {
   font-family: var(--font-en);
   font-size: 1.125rem;
   line-height: 1;
+}
+
+.problem {
+  padding-block: 3rem var(--space-section);
+  border-block-start: 0.0625rem solid var(--color-sub);
+  scroll-margin-block-start: 1rem;
+}
+
+.problem__label {
+  position: relative;
+  padding-inline-start: 1.75rem;
+  color: var(--color-deep);
+  font-family: var(--font-en);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  line-height: 1.2;
+}
+
+.problem__label::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1rem;
+  height: 0.0625rem;
+  background-color: var(--color-main);
+  content: "";
+  transform: translateY(-50%);
+}
+
+.problem__title {
+  margin-block-start: 1rem;
+  font-size: clamp(1.5rem, 6.4vw, 1.75rem);
+  font-weight: 600;
+  letter-spacing: 0.015em;
+  line-height: 1.55;
+}
+
+.problem__intro {
+  margin-block-start: 1.5rem;
+  font-size: 0.9375rem;
+  line-height: 2;
+}
+
+.problem__intro p + p {
+  margin-block-start: 0.75rem;
+}
+
+.problem__list {
+  margin-block-start: 2.5rem;
+  border-block-start: 0.0625rem solid var(--color-sub);
+}
+
+.problem__item {
+  padding-block: 1.5rem;
+  border-block-end: 0.0625rem solid var(--color-sub);
+}
+
+.problem__item-title {
+  position: relative;
+  margin: 0;
+  padding-inline-start: 1.25rem;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.problem__item-title::before {
+  position: absolute;
+  top: 0.8em;
+  left: 0;
+  width: 0.5rem;
+  height: 0.0625rem;
+  background-color: var(--color-main);
+  content: "";
+}
+
+.problem__item-text {
+  margin-block-start: 0.5rem;
+  font-size: 0.9375rem;
+  line-height: 1.9;
+}
+
+.problem__closing {
+  margin-block-start: 2.5rem;
+  padding-inline-start: 1rem;
+  border-inline-start: 0.1875rem solid var(--color-main);
+  font-size: 1.125rem;
+  letter-spacing: 0.015em;
+  line-height: 1.9;
 }
 
 .section-outline {
