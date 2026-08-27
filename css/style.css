@@ -220,13 +220,7 @@ p {
   line-height: 1;
 }
 
-.problem {
-  padding-block: 3rem var(--space-section);
-  border-block-start: 0.0625rem solid var(--color-sub);
-  scroll-margin-block-start: 1rem;
-}
-
-.problem__label {
+.section-label {
   position: relative;
   padding-inline-start: 1.75rem;
   color: var(--color-deep);
@@ -237,7 +231,7 @@ p {
   line-height: 1.2;
 }
 
-.problem__label::before {
+.section-label::before {
   position: absolute;
   top: 50%;
   left: 0;
@@ -248,12 +242,18 @@ p {
   transform: translateY(-50%);
 }
 
-.problem__title {
+.section-title {
   margin-block-start: 1rem;
   font-size: clamp(1.5rem, 6.4vw, 1.75rem);
   font-weight: 600;
   letter-spacing: 0.015em;
   line-height: 1.55;
+}
+
+.problem {
+  padding-block: 3rem var(--space-section);
+  border-block-start: 0.0625rem solid var(--color-sub);
+  scroll-margin-block-start: 1rem;
 }
 
 .problem__intro {
@@ -316,36 +316,6 @@ p {
   scroll-margin-block-start: 1rem;
 }
 
-.concept__label {
-  position: relative;
-  padding-inline-start: 1.75rem;
-  color: var(--color-deep);
-  font-family: var(--font-en);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  line-height: 1.2;
-}
-
-.concept__label::before {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 1rem;
-  height: 0.0625rem;
-  background-color: var(--color-main);
-  content: "";
-  transform: translateY(-50%);
-}
-
-.concept__title {
-  margin-block-start: 1rem;
-  font-size: clamp(1.5rem, 6.4vw, 1.75rem);
-  font-weight: 600;
-  letter-spacing: 0.015em;
-  line-height: 1.55;
-}
-
 .concept__media {
   margin-block-start: 2rem;
   overflow: hidden;
@@ -401,6 +371,131 @@ p {
 }
 
 .concept__closing strong {
+  font-weight: 600;
+}
+
+.lesson {
+  padding-block: 3rem var(--space-section);
+  background-color: var(--color-base);
+  scroll-margin-block-start: 1rem;
+}
+
+.lesson__intro {
+  margin-block-start: 1.5rem;
+  font-size: 0.9375rem;
+  line-height: 2;
+}
+
+.lesson__intro p + p {
+  margin-block-start: 1rem;
+}
+
+.lesson__list {
+  margin-block-start: 3rem;
+}
+
+.lesson-card {
+  padding-block: 2rem;
+  border-block-end: 0.0625rem solid var(--color-sub);
+}
+
+.lesson-card:first-child {
+  padding-block-start: 0;
+}
+
+.lesson-card--featured {
+  padding-block-end: 3rem;
+}
+
+.lesson-card--featured + .lesson-card--featured {
+  padding-block-start: 3rem;
+}
+
+.lesson-card--featured + .lesson-card--compact {
+  padding-block-start: 2.5rem;
+}
+
+.lesson-card__media,
+.lesson__practice {
+  overflow: hidden;
+  border-radius: var(--radius-medium);
+  background-color: var(--color-sub);
+}
+
+.lesson-card__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.lesson-card__content {
+  margin-block-start: 1.5rem;
+}
+
+.lesson-card__label {
+  position: relative;
+  padding-inline-start: 1.25rem;
+  color: var(--color-deep);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+}
+
+.lesson-card__label::before {
+  position: absolute;
+  top: 0.7em;
+  left: 0;
+  width: 0.5rem;
+  height: 0.0625rem;
+  background-color: var(--color-main);
+  content: "";
+}
+
+.lesson-card__number {
+  font-family: var(--font-en);
+  font-weight: 600;
+}
+
+.lesson-card__title {
+  margin: 0.75rem 0 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+}
+
+.lesson-card__text {
+  margin-block-start: 1rem;
+  font-size: 0.9375rem;
+  line-height: 2;
+}
+
+.lesson-card__text p + p {
+  margin-block-start: 1rem;
+}
+
+.lesson__practice {
+  margin-block-start: 3rem;
+}
+
+.lesson__practice-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center 45%;
+}
+
+.lesson__closing {
+  margin-block-start: 3rem;
+  padding-inline-start: 1rem;
+  border-inline-start: 0.1875rem solid var(--color-main);
+  font-size: 1.125rem;
+  letter-spacing: 0.015em;
+  line-height: 1.9;
+}
+
+.lesson__closing strong {
   font-weight: 600;
 }
 
