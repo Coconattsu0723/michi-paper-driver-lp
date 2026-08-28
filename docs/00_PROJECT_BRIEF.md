@@ -436,6 +436,9 @@ michi Instructor
 - 用途：SNS共有用OGP
 - `og:type`、`og:title`、`og:description`、`og:site_name`を設定済み
 - `twitter:card`、`twitter:title`、`twitter:description`を設定済み
+- `og:url`：`https://coconattsu0723.github.io/michi-paper-driver-lp/`
+- `og:image`：`https://coconattsu0723.github.io/michi-paper-driver-lp/assets/images/ogp/ogp-michi-1200x630.png`
+- `twitter:image`：`https://coconattsu0723.github.io/michi-paper-driver-lp/assets/images/ogp/ogp-michi-1200x630.png`
 
 ## Favicon
 
@@ -445,10 +448,12 @@ michi Instructor
 - Deep系背景＋白い小文字`m`のブランド意匠
 - Browser Tab用のPNG faviconとして設定済み
 
-## 後工程
+## 正式公開URL
 
-- canonicalは正式公開URL確定後に設定する
-- `og:url`、`og:image`、`twitter:image`は正式公開URL確定後に絶対URLで設定する
+- GitHub Pages：`https://coconattsu0723.github.io/michi-paper-driver-lp/`
+- canonical：`https://coconattsu0723.github.io/michi-paper-driver-lp/`
+- URL依存metadataは正式公開URLを使用して設定済み
+- READMEへの正式URL反映は後工程とする
 
 ---
 
@@ -477,6 +482,7 @@ michi Instructor
 - 正式OGP画像1点（1200 × 630px）
 - URL不要のOGP / Twitter Card metadata
 - 正式favicon 2点（48 × 48px / 32 × 32px）
+- 正式公開URLとURL依存metadata（canonical / OGP / Twitter Card）
 
 ## 未確定・今後の確認事項
 
@@ -485,7 +491,6 @@ michi Instructor
 - 対応エリア外の追加料金
 - Instructorの具体的な勤務年数・資格名・所属教習所名
 - 各セクションの未確定本文コピー
-- 公開URL
 
 ## 未着手
 

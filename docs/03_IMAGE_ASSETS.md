@@ -84,7 +84,9 @@ Safetyセクションのアイコンは、上記7点の正式採用PNGで統一�
 
 元画像は `/Users/natsumikato/Downloads/ChatGPT Image 2026年8月28日 13_23_31.png`（1731 × 909px）。デザイン、文字、写真、構図を変更せず、Cropなしの単純縮小でWeb用正式OGPを制作した。元画像は削除・上書きしない。
 
-`og:image`と`twitter:image`は絶対URLが必要なため、正式公開URLの確定後に設定する。
+公開時の絶対URL：`https://coconattsu0723.github.io/michi-paper-driver-lp/assets/images/ogp/ogp-michi-1200x630.png`
+
+`og:image`と`twitter:image`には上記の絶対URLを使用する。
 
 ---
 

@@ -626,6 +626,28 @@ Meta Description：
 - デザインを変更した16px版やICOを追加制作する
 - CSS filterや別画像でfaviconを疑似的に再現する
 
+## Decision 26: GitHub Pages正式URLで公開用metadataを確定
+
+### Decision
+
+- 正式公開URLを `https://coconattsu0723.github.io/michi-paper-driver-lp/` とする
+- canonicalと`og:url`に同じ正式公開URLを設定する
+- `og:image`と`twitter:image`に正式OGP画像の絶対URLを設定する
+- 正式OGP画像URLを `https://coconattsu0723.github.io/michi-paper-driver-lp/assets/images/ogp/ogp-michi-1200x630.png` とする
+- robots metaとmeta keywordsは追加しない既存方針を維持する
+
+### Reason
+
+- 検索エンジンとSNSへ同一の正式ページURLを明示するため
+- SNSクローラーが相対パスの解決に依存せずOGP画像へ直接アクセスできるようにするため
+- GitHub Repository URLではなく、閲覧者がアクセスするGitHub Pages URLを公開ページの正規URLとして使用するため
+
+### Alternative / Non-adopted direction
+
+- GitHub Repository URLをcanonicalへ設定する
+- 相対パスを`og:image`や`twitter:image`へ設定する
+- 末尾スラッシュなしのURLを混在させる
+
 ---
 
 # 15. OPEN DECISIONS
@@ -643,7 +665,6 @@ Meta Description：
 - Priceの初回90分含有内容・おすすめ対象・通常120分説明・3回パック例・プラン選び説明
 - Reservation Formの正式な選択肢・placeholder・具体的なエラー文
 - Container、Spacing、Border Radius、breakpointなどの正式数値
-- 公開URL、canonical、`og:url`、`og:image`、`twitter:image`
 
 ---
 
@@ -651,4 +672,4 @@ Meta Description：
 
 元の `00_PROJECT_BRIEF.md` にあった「正式画像制作、ロゴ制作、Git / GitHubが未着手」という進行状況は、その後の作業で更新された。
 
-現在は、正式写真7点、Safetyアイコン7点、ロゴ1点、OGP画像1点、favicon 2点をプロジェクトへ格納済み。OGP / TwitterのURL不要metaとfavicon設定も実装済みで、公開URLに依存するmetaと公開作業は後工程としている。
+現在は、正式写真7点、Safetyアイコン7点、ロゴ1点、OGP画像1点、favicon 2点をプロジェクトへ格納済み。GitHub Pagesの正式公開URLが確定し、canonical、OGP、Twitter Cardを含む公開用metadataも設定済み。README最終化と最終pushは後工程としている。
