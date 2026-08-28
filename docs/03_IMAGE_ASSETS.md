@@ -76,7 +76,19 @@ Safetyセクションのアイコンは、上記7点の正式採用PNGで統一�
 
 ---
 
-# 4. SVG / UI IMPLEMENTATION ASSETS
+# 4. OGP
+
+| 素材名 | 英字ファイル名 | 格納先 | 用途 | 状態 | 備考 |
+|---|---|---|---|---|---|
+| Social Sharing OGP | `ogp-michi-1200x630.png` | `assets/images/ogp/` | SNS共有用OGP | 正式採用済み | 1200 × 630px、PNG |
+
+元画像は `/Users/natsumikato/Downloads/ChatGPT Image 2026年8月28日 13_23_31.png`（1731 × 909px）。デザイン、文字、写真、構図を変更せず、Cropなしの単純縮小でWeb用正式OGPを制作した。元画像は削除・上書きしない。
+
+`og:image`と`twitter:image`は絶対URLが必要なため、正式公開URLの確定後に設定する。
+
+---
+
+# 5. SVG / UI IMPLEMENTATION ASSETS
 
 以下は画像生成素材ではなく、原則としてSVGまたはHTML/CSSによるUI実装を予定する。正式な図形、ファイル分割、命名は未確定。
 
@@ -116,7 +128,7 @@ Safetyセクションのアイコンは、上記7点の正式採用PNGで統一�
 
 ---
 
-# 5. HERO MAIN PHOTO PRODUCTION RECORD
+# 6. HERO MAIN PHOTO PRODUCTION RECORD
 
 正式採用済みHero写真の判断基準として、制作時のルールを記録する。
 
@@ -211,7 +223,7 @@ Heroの心理：**これから運転を再開する一歩手前**
 
 ---
 
-# 6. ASSETS NOT TO CREATE BY DEFAULT
+# 7. ASSETS NOT TO CREATE BY DEFAULT
 
 - Problem用の困り顔写真
 - Voice用の人物写真を複数点
@@ -222,7 +234,7 @@ Heroの心理：**これから運転を再開する一歩手前**
 
 ---
 
-# 7. ASSET RULES
+# 8. ASSET RULES
 
 - 正式素材は原則、1種類制作 → 確認 → 修正 → 正式採用 → 次の素材の順で進める
 - 承認済みの元画像をプロジェクトへコピーし、元データは移動・削除しない
@@ -230,11 +242,12 @@ Heroの心理：**これから運転を再開する一歩手前**
 - IconとLogoの透過情報を維持する
 - 同じ正式素材と思われる候補が複数ある場合は、勝手に選ばず確認する
 - 公開前の画像最適化までは圧縮・WebP変換を行わない
-- OGP / faviconは未制作
+- faviconは未制作
+- OGPは正式採用済みの1200 × 630px PNGを使用する
 
 ---
 
-# 8. VOICE ICONS
+# 9. VOICE ICONS
 
 | 素材名 | 英字ファイル名 | 格納先 | 用途 | 状態 | 備考 |
 |---|---|---|---|---|---|

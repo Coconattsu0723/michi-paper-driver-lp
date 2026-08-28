@@ -581,6 +581,30 @@ Meta Description：
 - 仮URLやRepository URLをcanonicalへ設定する
 - `meta name="keywords"`を追加する
 
+## Decision 24: 正式OGP画像とURL不要のSocial Metadataを採用
+
+### Decision
+
+- 元画像 `ChatGPT Image 2026年8月28日 13_23_31.png`（1731 × 909px）を正式採用する
+- デザイン、文字、写真、構図を変更せず、Cropなしで1200 × 630pxへ縮小する
+- Web用正式OGPを `assets/images/ogp/ogp-michi-1200x630.png` として格納する
+- `og:type`、`og:title`、`og:description`、`og:site_name`を設定する
+- `twitter:card`、`twitter:title`、`twitter:description`を設定する
+- canonical、`og:url`、`og:image`、`twitter:image`は正式公開URL確定後に設定する
+
+### Reason
+
+- SNS共有時に使用する正式な1200 × 630px画像を確定するため
+- 公開URLに依存しないmetadataを先に正式化するため
+- 未確定のGitHub Pages URLや仮URLを推測して記述しないため
+- 画像URLは公開後に絶対URLで設定し、参照切れを防ぐため
+
+### Alternative / Non-adopted direction
+
+- 元画像をAIで再生成・加工する
+- `file://`、相対パス、推測したGitHub Pages URLを画像URLに使用する
+- 公開URL未確定の状態でcanonicalや`og:url`を追加する
+
 ---
 
 # 15. OPEN DECISIONS
@@ -598,9 +622,8 @@ Meta Description：
 - Priceの初回90分含有内容・おすすめ対象・通常120分説明・3回パック例・プラン選び説明
 - Reservation Formの正式な選択肢・placeholder・具体的なエラー文
 - Container、Spacing、Border Radius、breakpointなどの正式数値
-- OGP
 - favicon
-- 公開URL、canonical、OGP URL
+- 公開URL、canonical、`og:url`、`og:image`、`twitter:image`
 
 ---
 

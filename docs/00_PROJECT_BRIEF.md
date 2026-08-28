@@ -427,10 +427,20 @@ michi Instructor
 
 **久しぶりの運転が不安な方へ。michiは、自宅周辺や子どもの送迎ルートなど、日常で実際に使う道を自分のペースで練習できる出張型ペーパードライバー講習です。名古屋市・愛知県近郊を中心に、ご希望の場所へ伺います。**
 
+## OGP / Twitter Card
+
+- 正式OGP画像：`assets/images/ogp/ogp-michi-1200x630.png`
+- 元画像：`ChatGPT Image 2026年8月28日 13_23_31.png`（1731 × 909px）
+- Web用正式サイズ：1200 × 630px
+- デザイン、文字、写真、構図を変更せず、Cropなしで縮小
+- 用途：SNS共有用OGP
+- `og:type`、`og:title`、`og:description`、`og:site_name`を設定済み
+- `twitter:card`、`twitter:title`、`twitter:description`を設定済み
+
 ## 後工程
 
 - canonicalは正式公開URL確定後に設定する
-- OGP / Twitter CardはOGP画像と公開URLの確定後に設定する
+- `og:url`、`og:image`、`twitter:image`は正式公開URL確定後に絶対URLで設定する
 - faviconは別工程で制作・設定する
 
 ---
@@ -457,6 +467,8 @@ michi Instructor
 - Safetyアイコン3点
 - michiロゴ1点
 - SEO基本metadata（title / meta description）
+- 正式OGP画像1点（1200 × 630px）
+- URL不要のOGP / Twitter Card metadata
 
 ## 未確定・今後の確認事項
 
@@ -465,7 +477,6 @@ michi Instructor
 - 対応エリア外の追加料金
 - Instructorの具体的な勤務年数・資格名・所属教習所名
 - 各セクションの未確定本文コピー
-- OGP
 - favicon
 - 公開URL
 
