@@ -551,7 +551,39 @@ Heroは初期表示画像のためLazy Loadせず、`fetchpriority="high"`を使
 
 ---
 
-# 14. OPEN DECISIONS
+# 14. SEO METADATA DECISIONS
+
+## Decision 23: SEO基本titleとmeta descriptionを正式化
+
+### Decision
+
+Title：
+
+**michi｜日常の道で練習できる出張型ペーパードライバー講習**
+
+Meta Description：
+
+**久しぶりの運転が不安な方へ。michiは、自宅周辺や子どもの送迎ルートなど、日常で実際に使う道を自分のペースで練習できる出張型ペーパードライバー講習です。名古屋市・愛知県近郊を中心に、ご希望の場所へ伺います。**
+
+`meta name="robots"`は追加せず、既定の`index, follow`動作を使用する。canonical、OGP、Twitter Card、faviconは後工程とする。
+
+### Reason
+
+- Titleでブランド名、日常の道で練習できる特徴、出張型ペーパードライバー講習であることを簡潔に伝えるため
+- Meta Descriptionで対象者、練習場所、自分のペース、対応エリアを自然な文章として伝えるため
+- 正式公開URLが未確定の状態で仮canonicalを設定しないため
+- 既定動作と同じrobots指定を重複追加せず、`head`を必要最小限に保つため
+
+### Alternative / Non-adopted direction
+
+- 46文字の長いTitleをそのまま使用する
+- Hero h1をTitleへそのまま流用する
+- 仮URLやRepository URLをcanonicalへ設定する
+- `meta name="keywords"`を追加する
+
+---
+
+# 15. OPEN DECISIONS
 
 以下は未確定のため、Decisionとして確定しない。
 
@@ -572,7 +604,7 @@ Heroは初期表示画像のためLazy Loadせず、`fetchpriority="high"`を使
 
 ---
 
-# 15. STATUS NOTE
+# 16. STATUS NOTE
 
 元の `00_PROJECT_BRIEF.md` にあった「正式画像制作、ロゴ制作、Git / GitHubが未着手」という進行状況は、その後の作業で更新された。
 

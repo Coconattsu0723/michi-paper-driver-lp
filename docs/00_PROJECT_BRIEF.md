@@ -415,7 +415,27 @@ michi Instructor
 
 ---
 
-# 8. CURRENT STATUS
+# 8. SEO BASIC METADATA
+
+## Title
+
+**michi｜日常の道で練習できる出張型ペーパードライバー講習**
+
+検索エンジンとブラウザへ、ブランド名、日常の道で練習できる特徴、出張型ペーパードライバー講習であることを伝える。
+
+## Meta Description
+
+**久しぶりの運転が不安な方へ。michiは、自宅周辺や子どもの送迎ルートなど、日常で実際に使う道を自分のペースで練習できる出張型ペーパードライバー講習です。名古屋市・愛知県近郊を中心に、ご希望の場所へ伺います。**
+
+## 後工程
+
+- canonicalは正式公開URL確定後に設定する
+- OGP / Twitter CardはOGP画像と公開URLの確定後に設定する
+- faviconは別工程で制作・設定する
+
+---
+
+# 9. CURRENT STATUS
 
 ## 確定済み
 
@@ -436,6 +456,7 @@ michi Instructor
 - 正式写真7点
 - Safetyアイコン3点
 - michiロゴ1点
+- SEO基本metadata（title / meta description）
 
 ## 未確定・今後の確認事項
 
