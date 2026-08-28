@@ -437,11 +437,18 @@ michi Instructor
 - `og:type`、`og:title`、`og:description`、`og:site_name`を設定済み
 - `twitter:card`、`twitter:title`、`twitter:description`を設定済み
 
+## Favicon
+
+- 元画像：`ChatGPT Image 2026年8月28日 13_29_07.png`（1254 × 1254px）
+- 正式ファイル：`assets/images/favicon/favicon-michi-48.png`（48 × 48px）
+- 補助ファイル：`assets/images/favicon/favicon-michi-32.png`（32 × 32px）
+- Deep系背景＋白い小文字`m`のブランド意匠
+- Browser Tab用のPNG faviconとして設定済み
+
 ## 後工程
 
 - canonicalは正式公開URL確定後に設定する
 - `og:url`、`og:image`、`twitter:image`は正式公開URL確定後に絶対URLで設定する
-- faviconは別工程で制作・設定する
 
 ---
 
@@ -469,6 +476,7 @@ michi Instructor
 - SEO基本metadata（title / meta description）
 - 正式OGP画像1点（1200 × 630px）
 - URL不要のOGP / Twitter Card metadata
+- 正式favicon 2点（48 × 48px / 32 × 32px）
 
 ## 未確定・今後の確認事項
 
@@ -477,7 +485,6 @@ michi Instructor
 - 対応エリア外の追加料金
 - Instructorの具体的な勤務年数・資格名・所属教習所名
 - 各セクションの未確定本文コピー
-- favicon
 - 公開URL
 
 ## 未着手

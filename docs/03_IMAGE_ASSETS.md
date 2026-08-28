@@ -88,7 +88,20 @@ Safetyセクションのアイコンは、上記7点の正式採用PNGで統一�
 
 ---
 
-# 5. SVG / UI IMPLEMENTATION ASSETS
+# 5. FAVICON
+
+| 素材名 | 英字ファイル名 | 格納先 | 用途 | 状態 | 備考 |
+|---|---|---|---|---|---|
+| Site Favicon 48 | `favicon-michi-48.png` | `assets/images/favicon/` | Browser Tab用favicon（第一候補） | 正式採用済み | 48 × 48px、PNG、Deep系背景＋白い小文字`m` |
+| Site Favicon 32 | `favicon-michi-32.png` | `assets/images/favicon/` | Browser Tab用favicon（補助サイズ） | 正式採用済み | 32 × 32px、PNG、Deep系背景＋白い小文字`m` |
+
+元画像は `/Users/natsumikato/Downloads/ChatGPT Image 2026年8月28日 13_29_07.png`（1254 × 1254px、PNG）。デザイン、色、形状、文字を変更せず、高品質縮小で2サイズを制作した。元画像は削除・上書きしない。
+
+PNGは現行ブラウザで扱いやすく、元画像の色とブランド意匠をそのまま維持できるため採用した。48px版を第一候補とし、表示環境に応じて選択できるよう32px版もheadへ設定する。
+
+---
+
+# 6. SVG / UI IMPLEMENTATION ASSETS
 
 以下は画像生成素材ではなく、原則としてSVGまたはHTML/CSSによるUI実装を予定する。正式な図形、ファイル分割、命名は未確定。
 
@@ -128,7 +141,7 @@ Safetyセクションのアイコンは、上記7点の正式採用PNGで統一�
 
 ---
 
-# 6. HERO MAIN PHOTO PRODUCTION RECORD
+# 7. HERO MAIN PHOTO PRODUCTION RECORD
 
 正式採用済みHero写真の判断基準として、制作時のルールを記録する。
 
@@ -223,7 +236,7 @@ Heroの心理：**これから運転を再開する一歩手前**
 
 ---
 
-# 7. ASSETS NOT TO CREATE BY DEFAULT
+# 8. ASSETS NOT TO CREATE BY DEFAULT
 
 - Problem用の困り顔写真
 - Voice用の人物写真を複数点
@@ -234,7 +247,7 @@ Heroの心理：**これから運転を再開する一歩手前**
 
 ---
 
-# 8. ASSET RULES
+# 9. ASSET RULES
 
 - 正式素材は原則、1種類制作 → 確認 → 修正 → 正式採用 → 次の素材の順で進める
 - 承認済みの元画像をプロジェクトへコピーし、元データは移動・削除しない
@@ -242,12 +255,12 @@ Heroの心理：**これから運転を再開する一歩手前**
 - IconとLogoの透過情報を維持する
 - 同じ正式素材と思われる候補が複数ある場合は、勝手に選ばず確認する
 - 公開前の画像最適化までは圧縮・WebP変換を行わない
-- faviconは未制作
+- faviconは正式採用済みの48px / 32px PNGを使用する
 - OGPは正式採用済みの1200 × 630px PNGを使用する
 
 ---
 
-# 9. VOICE ICONS
+# 10. VOICE ICONS
 
 | 素材名 | 英字ファイル名 | 格納先 | 用途 | 状態 | 備考 |
 |---|---|---|---|---|---|

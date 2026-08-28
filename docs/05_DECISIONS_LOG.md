@@ -605,6 +605,27 @@ Meta Description：
 - `file://`、相対パス、推測したGitHub Pages URLを画像URLに使用する
 - 公開URL未確定の状態でcanonicalや`og:url`を追加する
 
+## Decision 25: PNG faviconを48px / 32pxで正式採用
+
+### Decision
+
+- 元画像 `ChatGPT Image 2026年8月28日 13_29_07.png`（1254 × 1254px）をfavicon原本として採用する
+- デザイン、色、形状、文字を変更せず、48 × 48pxと32 × 32pxへ縮小する
+- `favicon-michi-48.png`を第一候補、`favicon-michi-32.png`を補助サイズとしてheadへ設定する
+- Apple Touch IconとICOは今回制作しない
+
+### Reason
+
+- Browser Tabの小さな表示領域に適した画像サイズを用意するため
+- 48px版で高DPI環境へ配慮し、32px版で一般的なfavicon表示環境にも対応するため
+- 現行ブラウザで扱いやすく、Deep系背景と白い小文字`m`のブランド意匠を維持できるPNGを使用するため
+
+### Alternative / Non-adopted direction
+
+- 1254 × 1254pxの元画像をそのままfaviconとして読み込む
+- デザインを変更した16px版やICOを追加制作する
+- CSS filterや別画像でfaviconを疑似的に再現する
+
 ---
 
 # 15. OPEN DECISIONS
@@ -622,7 +643,6 @@ Meta Description：
 - Priceの初回90分含有内容・おすすめ対象・通常120分説明・3回パック例・プラン選び説明
 - Reservation Formの正式な選択肢・placeholder・具体的なエラー文
 - Container、Spacing、Border Radius、breakpointなどの正式数値
-- favicon
 - 公開URL、canonical、`og:url`、`og:image`、`twitter:image`
 
 ---
@@ -631,4 +651,4 @@ Meta Description：
 
 元の `00_PROJECT_BRIEF.md` にあった「正式画像制作、ロゴ制作、Git / GitHubが未着手」という進行状況は、その後の作業で更新された。
 
-現在は、正式写真7点、Safetyアイコン7点、ロゴ1点をプロジェクトへ格納済みで、ローカルGit管理と初回commitまで完了している。GitHub remote、push、HTML / CSS / JavaScript実装、公開、OGP、faviconは未着手。
+現在は、正式写真7点、Safetyアイコン7点、ロゴ1点、OGP画像1点、favicon 2点をプロジェクトへ格納済み。OGP / TwitterのURL不要metaとfavicon設定も実装済みで、公開URLに依存するmetaと公開作業は後工程としている。
