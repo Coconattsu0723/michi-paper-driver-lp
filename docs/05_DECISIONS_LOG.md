@@ -527,7 +527,31 @@ Reservation FormとFooterのPrivacy Policy表示は、同一ページ内の`#pri
 
 ---
 
-# 13. OPEN DECISIONS
+# 13. IMAGE OPTIMIZATION DECISIONS
+
+## Decision 22: PNG原本を保持し、写真のWeb表示用WebPを追加
+
+### Decision
+
+正式採用済みの写真PNG7点は原本として保持し、Web表示用にリサイズ・圧縮したWebP7点を追加する。
+
+Heroは初期表示画像のためLazy Loadせず、`fetchpriority="high"`を使用する。Hero以外の写真は`loading="lazy"`を使用する。ロゴと線画アイコンは透明背景と輪郭を維持するため、正式採用PNGを継続使用する。
+
+### Reason
+
+- 元の正式素材を失わず、画質を維持しながらページ転送量を削減するため
+- CSS上の実表示幅とRetina表示を基準に、過剰な画像解像度を抑えるため
+- 初期表示に必要なHeroの読み込みを遅らせず、画面外の写真は必要になるまで読み込みを待つため
+
+### Alternative / Non-adopted direction
+
+- 元PNGを上書きまたは削除する
+- 写真・ロゴ・アイコンを同じ圧縮設定で一律WebP化する
+- Heroにも`loading="lazy"`を指定する
+
+---
+
+# 14. OPEN DECISIONS
 
 以下は未確定のため、Decisionとして確定しない。
 
@@ -548,7 +572,7 @@ Reservation FormとFooterのPrivacy Policy表示は、同一ページ内の`#pri
 
 ---
 
-# 14. STATUS NOTE
+# 15. STATUS NOTE
 
 元の `00_PROJECT_BRIEF.md` にあった「正式画像制作、ロゴ制作、Git / GitHubが未着手」という進行状況は、その後の作業で更新された。
 

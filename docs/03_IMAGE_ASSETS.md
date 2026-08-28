@@ -32,6 +32,22 @@
 
 `assets/images/photos/instructor-portrait.png` は正式採用済みの実ファイルとして格納済み。今回、画像自体の編集・リネームは行わない。
 
+## Web表示用最適化派生ファイル
+
+正式採用済みのPNG原本は削除・上書きせず、Web表示用のWebPを同じフォルダへ追加する。HTMLでは以下のWebPを参照する。
+
+| Original | Web | px | Quality | 読み込み方針 |
+|---|---|---:|---:|---|
+| `hero-main.png` | `hero-main.webp` | 1024 × 768 | 84 | 初期表示画像のためLazy Loadなし、`fetchpriority="high"` |
+| `concept-driving.png` | `concept-driving.webp` | 960 × 720 | 80 | `loading="lazy"` |
+| `lesson-route.png` | `lesson-route.webp` | 960 × 720 | 80 | `loading="lazy"` |
+| `lesson-parking.png` | `lesson-parking.webp` | 960 × 720 | 80 | `loading="lazy"` |
+| `lesson-driving-practice.png` | `lesson-driving-practice.webp` | 1344 × 1008 | 80 | 表示幅が他写真より広いためRetina相当を考慮。`loading="lazy"` |
+| `instructor-portrait.png` | `instructor-portrait.webp` | 960 × 720 | 80 | `loading="lazy"` |
+| `final-cta.png` | `final-cta.webp` | 960 × 720 | 80 | `loading="lazy"` |
+
+ロゴ、Safetyアイコン、Voice共通人物アイコンは透明背景と線の見え方を維持するため、正式採用PNGを継続使用する。FeaturesのSmileアイコンはinline SVGを維持する。
+
 ---
 
 # 2. SAFETY ICONS
