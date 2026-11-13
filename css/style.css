@@ -11,6 +11,7 @@
 
   --container-max: 70rem;
   --container-gutter: 1.25rem;
+  --hero-gutter: 0.5rem;
   --space-section: 4rem;
   --radius-small: 0.5rem;
   --radius-medium: 0.75rem;
@@ -204,7 +205,7 @@ p {
 }
 
 .hero__media {
-  width: calc(100% - 1rem);
+  width: calc(100% - (var(--hero-gutter) * 2));
   margin-inline: auto;
   overflow: hidden;
   border-radius: var(--radius-medium);
@@ -301,6 +302,11 @@ p {
   background-color: var(--color-main);
   content: "";
   transform: translateY(-50%);
+}
+
+.section-header {
+  margin-inline: calc(var(--hero-gutter) - var(--container-gutter));
+  text-align: start;
 }
 
 .section-title {
@@ -2227,6 +2233,7 @@ p {
 @media (min-width: 48rem) {
   :root {
     --container-gutter: 2rem;
+    --hero-gutter: var(--container-gutter);
     --space-section: 5rem;
   }
 
@@ -2296,10 +2303,8 @@ p {
     line-height: 1.9;
   }
 
-  .problem__header,
   .problem__list,
   .problem__closing,
-  .lesson__header,
   .lesson__practice,
   .lesson__closing {
     max-width: 42rem;
@@ -2370,13 +2375,9 @@ p {
     align-self: start;
   }
 
-  .features__header,
   .features__closing,
-  .safety__header,
   .safety__closing,
-  .flow__header,
   .flow__closing,
-  .price__header,
   .price__closing {
     max-width: 42rem;
     margin-inline: auto;
@@ -2420,12 +2421,9 @@ p {
     grid-row: 1 / 4;
   }
 
-  .driving-check__header,
   .driving-check__card,
-  .faq__header,
   .faq__list,
   .faq__closing,
-  .reservation__header,
   .reservation__demo-note,
   .reservation-form,
   .reservation__completion {
@@ -2437,7 +2435,6 @@ p {
     padding: 2rem;
   }
 
-  .instructor__header,
   .instructor__message,
   .instructor__policy,
   .instructor__closing {
@@ -2473,7 +2470,6 @@ p {
     margin-block-start: 0;
   }
 
-  .voice__header,
   .voice__list,
   .voice__closing {
     max-width: 40rem;
@@ -2519,8 +2515,10 @@ p {
     padding-block: var(--space-section);
   }
 
-  .privacy > .container {
+  .privacy__content,
+  .privacy__closing {
     max-width: 42rem;
+    margin-inline: auto;
   }
 
   .site-footer__inner {
@@ -2640,7 +2638,6 @@ p {
     font-size: 0.9375rem;
   }
 
-  .problem__header,
   .problem__list,
   .problem__closing {
     max-width: 45rem;
@@ -2671,19 +2668,15 @@ p {
     padding: 2.5rem;
   }
 
-  .driving-check__header,
   .driving-check__card,
-  .faq__header,
   .faq__list,
   .faq__closing,
-  .reservation__header,
   .reservation__demo-note,
   .reservation-form,
   .reservation__completion {
     max-width: 42rem;
   }
 
-  .instructor__header,
   .instructor__message,
   .instructor__policy,
   .instructor__closing {
@@ -2700,7 +2693,6 @@ p {
     gap: 1.5rem;
   }
 
-  .voice__header,
   .voice__closing {
     max-width: 45rem;
   }
@@ -2754,7 +2746,8 @@ p {
     border-block-start: 0;
   }
 
-  .privacy > .container {
+  .privacy__content,
+  .privacy__closing {
     max-width: 45rem;
   }
 
