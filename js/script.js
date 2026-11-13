@@ -15,7 +15,7 @@
     const nextOpen = desktopNavigation.matches ? false : isOpen;
 
     menuButton.setAttribute("aria-expanded", String(nextOpen));
-    menuLabel.textContent = nextOpen ? "CLOSE" : "MENU";
+    menuLabel.textContent = nextOpen ? "閉じる" : "メニュー";
     navigation.hidden = desktopNavigation.matches ? false : !nextOpen;
 
     if (returnFocus) {

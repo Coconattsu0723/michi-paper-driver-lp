@@ -2,6 +2,8 @@
 
 子どもの送迎などをきっかけに運転を再開したい人向けの、架空の出張型ペーパードライバー講習LPです。
 
+![michi PAPER DRIVER LESSONのOGP画像](assets/images/ogp/ogp-michi-1200x630.png)
+
 ## Live Demo
 
 https://coconattsu0723.github.io/michi-paper-driver-lp/
