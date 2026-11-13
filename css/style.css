@@ -13,6 +13,7 @@
   --container-max: 70rem;
   --container-gutter: 1.25rem;
   --hero-gutter: 0.5rem;
+  --section-heading-gutter: max(1rem, var(--hero-gutter));
   --space-section: 4rem;
   --radius-small: 0.5rem;
   --radius-medium: 0.75rem;
@@ -89,6 +90,35 @@ p {
 
 .site-header {
   background-color: var(--color-base);
+}
+
+@media (min-width: 64rem) {
+  html {
+    scroll-padding-block-start: 5.5rem;
+  }
+
+  .site-header {
+    position: sticky;
+    inset-block-start: 0;
+    z-index: 20;
+  }
+}
+
+@media (width < 64rem) {
+  html {
+    scroll-padding-block-start: 5.25rem;
+  }
+
+  .site-header.is-menu-enhanced {
+    position: sticky;
+    inset-block-start: 0;
+    z-index: 20;
+  }
+
+  .site-header.is-menu-enhanced .site-nav {
+    max-height: calc(100dvh - 6.25rem);
+    overflow-y: auto;
+  }
 }
 
 .site-header__inner {
@@ -299,7 +329,7 @@ p {
 }
 
 .section-header {
-  margin-inline: calc(var(--hero-gutter) - var(--container-gutter));
+  margin-inline: calc(var(--section-heading-gutter) - var(--container-gutter));
   text-align: start;
 }
 
@@ -1570,7 +1600,7 @@ p {
 
 .faq__list {
   margin-block-start: 2.5rem;
-  margin-inline: calc(var(--hero-gutter) - var(--container-gutter));
+  margin-inline: calc(var(--section-heading-gutter) - var(--container-gutter));
   border-block-start: 0.0625rem solid var(--color-sub);
 }
 
@@ -2532,7 +2562,10 @@ p {
     font-size: 0.9375rem;
   }
 
-  .problem__list,
+  .problem__list {
+    max-width: none;
+  }
+
   .problem__closing {
     max-width: 45rem;
   }
