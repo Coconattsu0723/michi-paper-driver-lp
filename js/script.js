@@ -421,8 +421,6 @@
   const menuButton = document.querySelector(".menu-button");
   const stopSections = [
     document.querySelector("#final-cta"),
-    document.querySelector("#reservation"),
-    document.querySelector("#privacy"),
     document.querySelector(".site-footer"),
   ].filter(Boolean);
 

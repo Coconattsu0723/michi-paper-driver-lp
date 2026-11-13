@@ -334,13 +334,17 @@ p {
 }
 
 .problem__list {
+  display: grid;
+  gap: 1rem;
   margin-block-start: 2.5rem;
-  border-block-start: 0.0625rem solid var(--color-sub);
 }
 
 .problem__item {
-  padding-block: 1.5rem;
-  border-block-end: 0.0625rem solid var(--color-sub);
+  padding: 1.25rem;
+  border: 0.0625rem solid var(--color-sub);
+  border-inline-start: 0.1875rem solid var(--color-main);
+  border-radius: var(--radius-small);
+  background-color: color-mix(in srgb, var(--color-white) 75%, var(--color-sub));
 }
 
 .problem__item-title {
@@ -364,6 +368,7 @@ p {
 
 .problem__item-text {
   margin-block-start: 0.5rem;
+  padding-inline-start: 1.25rem;
   font-size: 0.9375rem;
   line-height: 1.9;
 }
@@ -458,45 +463,16 @@ p {
 }
 
 .lesson__list {
+  display: grid;
+  gap: 1rem;
   margin-block-start: 3rem;
 }
 
 .lesson-card {
-  padding-block: 2rem;
-  border-block-end: 0.0625rem solid var(--color-sub);
-}
-
-.lesson-card:first-child {
-  padding-block-start: 0;
-}
-
-.lesson-card--featured {
-  padding-block-end: 3rem;
-}
-
-.lesson-card--featured + .lesson-card--featured {
-  padding-block-start: 3rem;
-}
-
-.lesson-card--featured + .lesson-card--compact {
-  padding-block-start: 2.5rem;
-}
-
-.lesson-card__media,
-.lesson__practice {
-  overflow: hidden;
-  border-radius: var(--radius-medium);
-  background-color: var(--color-sub);
-}
-
-.lesson-card__image {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-}
-
-.lesson-card__content {
-  margin-block-start: 1.5rem;
+  padding: 1rem;
+  border: 0.0625rem solid var(--color-sub);
+  border-radius: var(--radius-small);
+  background-color: var(--color-white);
 }
 
 .lesson-card__label {
@@ -543,12 +519,16 @@ p {
 }
 
 .lesson__practice {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.5rem, 2vw, 1.5rem);
   margin-block-start: 3rem;
 }
 
 .lesson__practice-image {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-medium);
   object-fit: cover;
   object-position: center 45%;
 }
@@ -1129,8 +1109,6 @@ p {
 
 .instructor__message {
   margin-block-start: 3rem;
-  padding-inline-start: 1.25rem;
-  border-inline-start: 0.1875rem solid var(--color-main);
 }
 
 .instructor__message-title {
@@ -1411,82 +1389,65 @@ p {
   scroll-margin-block-start: 1rem;
 }
 
-.price__card {
+.price__plan-list {
+  display: grid;
+  gap: 1rem;
   margin-block-start: 2.5rem;
-  padding: 1.75rem 1.5rem;
+}
+
+.price__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem 1rem;
   border: 0.0625rem solid var(--color-sub);
   border-radius: var(--radius-medium);
   background-color: var(--color-white);
   text-align: center;
 }
 
+.price__card--recommended {
+  border-color: var(--color-deep);
+  background-color: var(--color-sub);
+  box-shadow: inset 0 0 0 0.0625rem var(--color-deep);
+}
+
+.price__recommendation {
+  align-self: center;
+  margin-block-end: 0.75rem;
+  padding: 0.15rem 0.85rem;
+  border-radius: 2rem;
+  background-color: var(--color-deep);
+  color: var(--color-white);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
 .price__plan {
   margin: 0;
-  color: var(--color-deep);
   font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
   line-height: 1.6;
 }
 
 .price__amount {
-  display: flex;
   margin-block-start: 0.75rem;
-  align-items: baseline;
-  justify-content: center;
-  gap: 0.25rem;
   font-variant-numeric: tabular-nums;
   line-height: 1.4;
 }
 
 .price__amount strong {
-  font-size: clamp(2rem, 9vw, 2.5rem);
-  font-weight: 600;
-  letter-spacing: 0.01em;
-}
-
-.price__amount span {
-  font-size: 0.8125rem;
-}
-
-.price__plan-list {
-  margin-block-start: 1.5rem;
-  border-block: 0.0625rem solid var(--color-sub);
-}
-
-.price__plan-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding-block: 1.25rem;
-}
-
-.price__plan-item + .price__plan-item {
-  border-block-start: 0.0625rem solid var(--color-sub);
-}
-
-.price__plan-name,
-.price__plan-price {
+  display: block;
+  font-size: clamp(1.5rem, 3.4vw, 2.25rem);
   font-weight: 600;
 }
 
-.price__plan-name,
-.price__plan-duration {
-  text-align: start;
+.price__card--recommended .price__amount strong {
+  font-size: clamp(2rem, 4vw, 2.75rem);
 }
 
-.price__plan-price {
-  flex: 0 0 auto;
-  font-variant-numeric: tabular-nums;
-  text-align: end;
-}
-
+.price__amount span,
 .price__plan-duration {
-  margin-block-start: 0.125rem;
-  color: var(--color-deep);
   font-size: 0.8125rem;
-  line-height: 1.6;
 }
 
 .price__notes {
@@ -1614,7 +1575,9 @@ p {
 }
 
 .faq__list {
+  width: min(calc(100% - 1rem), 36rem);
   margin-block-start: 2.5rem;
+  margin-inline: auto;
   border-block-start: 0.0625rem solid var(--color-sub);
 }
 
@@ -1634,6 +1597,7 @@ p {
   align-items: start;
   gap: 0.75rem;
   padding-block: 1.25rem;
+  padding-inline: 0.5rem;
   color: var(--color-deep);
   text-align: start;
 }
@@ -1661,6 +1625,7 @@ p {
 }
 
 .faq__question-text {
+  overflow-wrap: anywhere;
   font-size: 0.9375rem;
   font-weight: 600;
   line-height: 1.8;
@@ -1694,7 +1659,8 @@ p {
 }
 
 .faq__answer-inner {
-  padding: 0 0 1.5rem 2.625rem;
+  padding: 0 0.5rem 1.5rem 3.125rem;
+  overflow-wrap: anywhere;
   font-size: 0.9375rem;
   line-height: 1.9;
 }
@@ -2253,6 +2219,14 @@ p {
     font-size: 2rem;
   }
 
+  .problem__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .problem__item:last-child {
+    grid-column: 1 / -1;
+  }
+
   .problem,
   .concept,
   .lesson,
@@ -2305,7 +2279,6 @@ p {
 
   .problem__list,
   .problem__closing,
-  .lesson__practice,
   .lesson__closing {
     max-width: 42rem;
     margin-inline: auto;
@@ -2332,47 +2305,7 @@ p {
   }
 
   .lesson__list {
-    display: grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-    gap: 1.5rem;
-  }
-
-  .lesson-card {
-    padding-block: 0;
-    border-block-end: 0;
-  }
-
-  .lesson-card--featured {
-    display: grid;
-    grid-column: 1 / -1;
-    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-    gap: 2rem;
-    padding-block-end: 2rem;
-    border-block-end: 0.0625rem solid var(--color-sub);
-  }
-
-  .lesson-card--featured + .lesson-card--featured {
-    padding-block-start: 2rem;
-  }
-
-  .lesson-card--featured + .lesson-card--compact {
-    padding-block-start: 1.25rem;
-  }
-
-  .lesson-card--compact {
-    grid-column: span 2;
-    padding: 1.25rem;
-    border: 0.0625rem solid var(--color-sub);
-    border-radius: var(--radius-small);
-    background-color: var(--color-white);
-  }
-
-  .lesson-card__content {
-    margin-block-start: 0;
-  }
-
-  .lesson-card__media {
-    align-self: start;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .features__closing,
@@ -2422,7 +2355,6 @@ p {
   }
 
   .driving-check__card,
-  .faq__list,
   .faq__closing,
   .reservation__demo-note,
   .reservation-form,
@@ -2436,10 +2368,8 @@ p {
   }
 
   .instructor__message,
-  .instructor__policy,
-  .instructor__closing {
+  .instructor__policy {
     max-width: 42rem;
-    margin-inline: auto;
   }
 
   .instructor__profile {
@@ -2476,39 +2406,13 @@ p {
     margin-inline: auto;
   }
 
-  .price__card,
-  .price__plan-list,
+  .price__plan-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .price__cta {
     max-width: 40rem;
     margin-inline: auto;
-  }
-
-  .price__plan-list {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .price__plan-item {
-    padding: 1.25rem 1.5rem;
-  }
-
-  .price__plan-item + .price__plan-item {
-    border-block-start: 0;
-    border-inline-start: 0.0625rem solid var(--color-sub);
-  }
-
-  .price__notes {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-  }
-
-  .price__note-block + .price__note-block {
-    margin-block-start: 0;
-  }
-
-  .price__note-block:last-child {
-    grid-column: 1 / -1;
   }
 
   .final-cta {
@@ -2648,12 +2552,10 @@ p {
     gap: 3rem;
   }
 
-  .lesson-card--featured {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 3rem;
+  .lesson__list {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
-  .lesson-card--compact,
   .features__item {
     padding: 2rem;
   }
@@ -2669,7 +2571,6 @@ p {
   }
 
   .driving-check__card,
-  .faq__list,
   .faq__closing,
   .reservation__demo-note,
   .reservation-form,
@@ -2678,8 +2579,7 @@ p {
   }
 
   .instructor__message,
-  .instructor__policy,
-  .instructor__closing {
+  .instructor__policy {
     max-width: 48rem;
   }
 
@@ -2708,18 +2608,8 @@ p {
     margin-block-start: 0;
   }
 
-  .price__card,
-  .price__plan-list,
   .price__cta {
     max-width: 42rem;
-  }
-
-  .price__notes {
-    gap: 1.5rem;
-  }
-
-  .price__amount strong {
-    font-size: 3rem;
   }
 
   .final-cta__title {
