@@ -469,7 +469,7 @@ p {
 }
 
 .lesson-card {
-  padding: 1rem;
+  padding: 1rem 1.125rem;
   border: 0.0625rem solid var(--color-sub);
   border-radius: var(--radius-small);
   background-color: var(--color-white);
@@ -502,7 +502,7 @@ p {
 
 .lesson-card__title {
   margin: 0.75rem 0 0;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 600;
   letter-spacing: 0.01em;
   line-height: 1.6;
@@ -1398,7 +1398,7 @@ p {
 .price__card {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   padding: 1.5rem 1rem;
   border: 0.0625rem solid var(--color-sub);
   border-radius: var(--radius-medium);
@@ -1407,6 +1407,7 @@ p {
 }
 
 .price__card--recommended {
+  justify-content: flex-end;
   border-color: var(--color-deep);
   background-color: var(--color-sub);
   box-shadow: inset 0 0 0 0.0625rem var(--color-deep);
@@ -2292,15 +2293,13 @@ p {
     gap: 2.5rem 2rem;
   }
 
-  .concept__header,
-  .final-cta__header {
+  .concept__header {
     grid-column: 1 / -1;
   }
 
   .concept__media,
   .concept__body,
-  .final-cta__media,
-  .final-cta__body {
+  .final-cta__media {
     margin-block-start: 0;
   }
 
@@ -2357,6 +2356,7 @@ p {
   .driving-check__card,
   .faq__closing,
   .reservation__demo-note,
+  .reservation__header,
   .reservation-form,
   .reservation__completion {
     max-width: 40rem;
@@ -2573,6 +2573,7 @@ p {
   .driving-check__card,
   .faq__closing,
   .reservation__demo-note,
+  .reservation__header,
   .reservation-form,
   .reservation__completion {
     max-width: 42rem;
