@@ -5,6 +5,7 @@
   --color-sub: #dce6e8;
   --color-accent: #e5ad82;
   --color-white: #ffffff;
+  --color-section-alt: color-mix(in srgb, var(--color-sub) 60%, var(--color-base));
 
   --font-ja: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
   --font-en: "DM Sans", sans-serif;
@@ -275,13 +276,6 @@ p {
   color: var(--color-deep);
 }
 
-.button__arrow {
-  flex: 0 0 auto;
-  font-family: var(--font-en);
-  font-size: 1.125rem;
-  line-height: 1;
-}
-
 .section-label {
   position: relative;
   padding-inline-start: 1.75rem;
@@ -320,6 +314,7 @@ p {
 .problem {
   padding-block: 3rem var(--space-section);
   border-block-start: 0.0625rem solid var(--color-sub);
+  background-color: var(--color-section-alt);
   scroll-margin-block-start: 1rem;
 }
 
@@ -384,7 +379,6 @@ p {
 
 .concept {
   padding-block: 3rem var(--space-section);
-  background-color: var(--color-sub);
   scroll-margin-block-start: 1rem;
 }
 
@@ -448,7 +442,7 @@ p {
 
 .lesson {
   padding-block: 3rem var(--space-section);
-  background-color: var(--color-base);
+  background-color: var(--color-section-alt);
   scroll-margin-block-start: 1rem;
 }
 
@@ -548,7 +542,6 @@ p {
 
 .features {
   padding-block: 3rem var(--space-section);
-  background-color: var(--color-sub);
   scroll-margin-block-start: 1rem;
 }
 
@@ -624,7 +617,7 @@ p {
 
 .safety {
   padding-block: 3rem var(--space-section);
-  background-color: var(--color-base);
+  background-color: var(--color-section-alt);
   scroll-margin-block-start: 1rem;
 }
 
@@ -729,7 +722,6 @@ p {
 .driving-check {
   padding-block: var(--space-section);
   border-block-start: 0.0625rem solid var(--color-sub);
-  background-color: var(--color-base);
   scroll-margin-block-start: 1rem;
 }
 
@@ -1047,7 +1039,7 @@ p {
 
 .instructor {
   padding-block: 3rem var(--space-section);
-  background-color: var(--color-white);
+  background-color: var(--color-section-alt);
   scroll-margin-block-start: 1rem;
 }
 
@@ -1170,7 +1162,6 @@ p {
 
 .flow {
   padding-block: 3rem var(--space-section);
-  background-color: var(--color-base);
   scroll-margin-block-start: 1rem;
 }
 
@@ -1277,7 +1268,7 @@ p {
 
 .voice {
   padding-block: 3rem var(--space-section);
-  background-color: var(--color-sub);
+  background-color: var(--color-section-alt);
   scroll-margin-block-start: 1rem;
 }
 
@@ -1385,7 +1376,6 @@ p {
 
 .price {
   padding-block: 3rem var(--space-section);
-  background-color: var(--color-base);
   scroll-margin-block-start: 1rem;
 }
 
@@ -1556,12 +1546,15 @@ p {
 }
 
 .price__cta {
+  display: flex;
+  width: min(100%, 17rem);
   margin-block-start: 2rem;
+  margin-inline: auto;
 }
 
 .faq {
   padding-block: var(--space-section);
-  background-color: var(--color-base);
+  background-color: var(--color-section-alt);
   scroll-margin-block-start: 1rem;
 }
 
@@ -1576,9 +1569,8 @@ p {
 }
 
 .faq__list {
-  width: min(calc(100% - 1rem), 36rem);
   margin-block-start: 2.5rem;
-  margin-inline: auto;
+  margin-inline: calc(var(--hero-gutter) - var(--container-gutter));
   border-block-start: 0.0625rem solid var(--color-sub);
 }
 
@@ -1598,7 +1590,6 @@ p {
   align-items: start;
   gap: 0.75rem;
   padding-block: 1.25rem;
-  padding-inline: 0.5rem;
   color: var(--color-deep);
   text-align: start;
 }
@@ -1660,7 +1651,7 @@ p {
 }
 
 .faq__answer-inner {
-  padding: 0 0.5rem 1.5rem 3.125rem;
+  padding: 0 0 1.5rem 2.625rem;
   overflow-wrap: anywhere;
   font-size: 0.9375rem;
   line-height: 1.9;
@@ -1692,8 +1683,12 @@ p {
 
 .final-cta {
   padding-block: calc(var(--space-section) + 0.5rem);
-  background-color: color-mix(in srgb, var(--color-sub) 60%, var(--color-base));
   scroll-margin-block-start: 1rem;
+}
+
+.final-cta .final-cta__title {
+  font-size: clamp(1rem, 5.5vw, 1.75rem);
+  white-space: nowrap;
 }
 
 .final-cta__media {
@@ -2410,11 +2405,6 @@ p {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .price__cta {
-    max-width: 40rem;
-    margin-inline: auto;
-  }
-
   .final-cta {
     padding-block: var(--space-section);
   }
@@ -2607,10 +2597,6 @@ p {
 
   .voice-card + .voice-card {
     margin-block-start: 0;
-  }
-
-  .price__cta {
-    max-width: 42rem;
   }
 
   .final-cta__title {
